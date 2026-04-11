@@ -1,7 +1,20 @@
+Hunter rumours are like slayer tasks assigned to you by guild hunters in the Burrow (https://oldschool.runescape.wiki/w/The_Burrow)
+To begin first talk to Guild Scribe Verity (https://oldschool.runescape.wiki/w/Guild_Scribe_Verity) in the Burrow (https://oldschool.runescape.wiki/w/The_Burrow) under the Hunter Guild (https://oldschool.runescape.wiki/w/Hunter_Guild)
+
+Unlike slayer tasks where you are given a fixed number of kills, hunter rumours can finish at any point, with a maximum limit until completing the rumour.
+You can effectively 'block' tasks from being given; for example if you talk to the novice hunter and he gives you a pyre fox task, you can talk to another hunter 
+e.g an adept hunter; for another task and it cannot be a pyre fox task because the novice hunter is 'holding' that task.
+
+This can be setup in leagues by only having varlamore unlock to always give red chinchompa tasks. See the following setups for different difficulties below.
+
+Novice:
 need level 46 hunter for first rumours, spam novice rumours until lvl 57
+
+Adept:
 at 57 use ornus until pyre fox task
 now use cervus for always red chins
 
+Expert:
 at 72 use aco until sunlight antelope
 then use teco for red chins
 at 75 sunlight moths can be assigned
@@ -12,7 +25,7 @@ then continue with red chins
 ALTERNATE at 72
 block tecu salamander with gilman (novice)
 block sunlight antelope with teco
-switch between red chins and moonlight moths (can block red chins with an adept for full butterfly)
+result: you can switch between red chins and moonlight moths (can block red chins with an adept for full butterfly)
 .
 
 

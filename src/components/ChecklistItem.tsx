@@ -1,8 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import { Step, StepLink } from '@/data/guideData';
 import { relicImg } from '@/utils/assetPath';
+import HunterRumoursModal from './HunterRumoursModal';
+import Hunter46Modal from './Hunter46Modal';
 import type { ReactNode } from 'react';
+
+const MODAL_COMPONENTS: Record<string, React.ComponentType<{ onClose: () => void }>> = {
+  'hunter-rumours': HunterRumoursModal,
+  'hunter-46': Hunter46Modal,
+};
 
 function renderTextWithLinks(text: string, links?: StepLink[]): ReactNode {
   if (!links || links.length === 0) return text;
@@ -108,8 +116,34 @@ function CheckboxIndicator({ checked, checkBorder, checkFill, compact }: {
 }
 
 export default function ChecklistItem({ step, checked, onToggle, compact = false }: Props) {
+  const [modalOpen, setModalOpen] = useState(false);
   const styles = typeStyles[step.type];
   const isCheckable = step.type !== 'info';
+
+  // Modal-triggering info items render as a clickable row instead of a plain div
+  if (step.modal) {
+    const ModalComponent = MODAL_COMPONENTS[step.modal];
+    return (
+      <>
+        <button
+          type="button"
+          onClick={() => setModalOpen(true)}
+          className={`w-full text-left flex items-center gap-3 rounded-md border px-3 ${compact ? 'py-1.5' : 'py-2'} border-osrs-gold/40 bg-osrs-gold/8 hover:border-osrs-gold/70 hover:bg-osrs-gold/15 transition-all duration-200 cursor-pointer group`}
+        >
+          <svg className="flex-shrink-0 w-3.5 h-3.5 text-osrs-gold/70 group-hover:text-osrs-gold transition-colors" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3a.75.75 0 110 1.5A.75.75 0 018 4zm1 8H7v-5h2v5z" />
+          </svg>
+          <span className={`flex-1 text-sm text-osrs-gold/80 group-hover:text-osrs-gold transition-colors font-medium ${compact ? 'text-xs' : ''}`}>
+            {step.text}
+          </span>
+          <svg className="flex-shrink-0 w-3 h-3 text-osrs-gold/50 group-hover:text-osrs-gold/80 transition-colors" viewBox="0 0 12 12" fill="none">
+            <path d="M2 10L10 2M10 2H5M10 2v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </button>
+        {modalOpen && ModalComponent && <ModalComponent onClose={() => setModalOpen(false)} />}
+      </>
+    );
+  }
 
   const content = (
     <>

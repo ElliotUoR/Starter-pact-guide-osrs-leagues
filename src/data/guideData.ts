@@ -16,6 +16,8 @@ export interface Step {
   relics?: string[];
   /** Inline hyperlinks — each entry wraps a substring of `text` in an anchor tag */
   links?: StepLink[];
+  /** If set, clicking the item opens a named modal overlay instead of toggling */
+  modal?: string;
 }
 
 export interface GearItem {
@@ -131,9 +133,36 @@ export const stages: Stage[] = [
         ],
       },
       {
+        id: 's1-nounlock',
+        text: 'DO NOT UNLOCK ANY OTHER REGIONS UNTIL COMPLETING HUNTER',
+        type: 'warning',
+      },
+      {
+        id: 's1-h46',
+        text: 'Get 46 Hunter for rumours',
+        type: 'step',
+      },
+      {
+        id: 's1-h46modal',
+        text: 'Click here for lvl 46 hunter guide',
+        type: 'info',
+        modal: 'hunter-46',
+      },
+      {
+        id: 's1-rumours',
+        text: 'Spam hunter rumours',
+        type: 'step',
+      },
+      {
         id: 's1-1',
         text: 'Get 91 Hunter and 74 Fletching — transmute EH logs or use rumour sack logs for quick xp',
         type: 'step',
+      },
+      {
+        id: 's1-hunterinfo',
+        text: 'Click here for more info on setting up hunter rumours',
+        type: 'info',
+        modal: 'hunter-rumours',
       },
       {
         id: 's1-pts3',
