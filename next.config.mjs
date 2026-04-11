@@ -3,8 +3,8 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: { unoptimized: true },
-  // Set basePath if deploying to a sub-path e.g. /osrs-leagues-guide
-  // basePath: '/osrs-leagues-guide',
+  // Replace 'osrs-leagues-guide' with your actual GitHub repo name
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
 };
 
 export default nextConfig;
