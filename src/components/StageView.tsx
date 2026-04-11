@@ -193,7 +193,7 @@ export default function StageView({
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-osrs-muted">Stages</span>
-                  <span className="text-osrs-gold font-mono">9</span>
+                  <span className="text-osrs-gold font-mono">{totalStages - 1}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-osrs-muted">Regions</span>

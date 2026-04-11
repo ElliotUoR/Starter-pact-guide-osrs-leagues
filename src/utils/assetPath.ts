@@ -6,3 +6,6 @@ export const assetPath = (path: string) => `${base}${path}`;
 
 export const relicImg = (filename: string) =>
   assetPath(`/images/relics/${filename}`);
+
+export const pactImg = (filename: string) =>
+  assetPath(`/images/pacts/${filename}`);

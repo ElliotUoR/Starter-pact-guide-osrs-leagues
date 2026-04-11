@@ -1,4 +1,4 @@
-export type StepType = 'pact' | 'step' | 'info' | 'warning' | 'relic';
+export type StepType = 'pact' | 'step' | 'info' | 'warning' | 'relic' | 'keystone';
 
 export interface StepLink {
   /** The substring of `text` to turn into a hyperlink */
@@ -18,6 +18,8 @@ export interface Step {
   links?: StepLink[];
   /** If set, clicking the item opens a named modal overlay instead of toggling */
   modal?: string;
+  /** Filename from /images/pacts/ to display alongside keystone steps */
+  pactImage?: string;
 }
 
 export interface GearItem {
@@ -293,7 +295,7 @@ export const stages: Stage[] = [
   {
     id: 2,
     title: 'Huey & Karamja',
-    subtitle: 'Pacts 6–10',
+    subtitle: 'Pacts 6–8',
     intro:
       'Unlock Kandarin first for Karamja access. Train Ranged for the Sunlight Hunter Bow, gear up for the kill style of your choice, then clear the Karamja pact tasks.',
     steps: [
@@ -423,18 +425,6 @@ export const stages: Stage[] = [
       },
       { id: 's2-p3', text: 'Defeat a TzHaar', type: 'pact', points: 30 },
       { id: 's2-p3info', text: 'Can safespot or just pray against style', type: 'info' },
-      {
-        id: 's2-p4',
-        text: 'Defeat a Demonic Gorilla',
-        type: 'pact',
-        points: 80,
-      },
-      {
-        id: 's2-p5',
-        text: 'Defeat a Mithril Dragon — pray melee, bring good food (hits 18s). Can be done before Huey.',
-        type: 'pact',
-        points: 80,
-      },
     ],
     gearUpgrades: [
       {
@@ -481,43 +471,86 @@ export const stages: Stage[] = [
     buildLabel: '10p Build',
   },
 
-  // ─── Stage 3: Kourend ────────────────────────────────────────────────────────
+  // ─── Stage 3: Kandarin ───────────────────────────────────────────────────────
   {
     id: 3,
+    title: 'Kandarin',
+    subtitle: 'Pacts 9–10',
+    intro:
+      'Clear the remaining Kandarin pacts before moving on. Demonic Gorillas and Mithril Dragons are both tough — bring prayer and good food.',
+    steps: [
+      {
+        id: 's3k-p1',
+        text: 'Defeat a Demonic Gorilla',
+        type: 'pact',
+        points: 80,
+      },
+      {
+        id: 's3k-p2',
+        text: 'Defeat a Mithril Dragon — pray melee, bring good food (hits 18s). Can be done before Huey.',
+        type: 'pact',
+        points: 80,
+      },
+    ],
+    gearUpgrades: [],
+    buildLink:
+      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAAACQAEAA&name=..%20v%20start%20cbow%2010p',
+    buildLabel: '10p Build',
+  },
+
+  // ─── Stage 4: Kourend ────────────────────────────────────────────────────────
+  {
+    id: 4,
     title: 'Kourend',
     subtitle: 'Pacts 11–12',
     intro:
       'Unlock Kourend as your second region. Two quick pacts and the max hit keystone unlock. Start preparing Crafting for the gear upgrades ahead.',
     steps: [
+      { id: 's3-region', text: 'Unlock second region', type: 'step' },
+      { id: 's3-pts5', text: 'Get enough points for 5th relic — if within reach / not done already', type: 'step' },
+      {
+        id: 's3-r5',
+        text: 'Unlock Larcenist relic',
+        type: 'relic',
+        relics: ['Larcenist.png'],
+      },
       { id: 's3-p1', text: 'Open 1 Grubby Chest', type: 'pact', points: 10 },
-      { id: 's3-1', text: 'Assign the Max Hit keystone', type: 'step' },
+      {
+        id: 's3-p1info',
+        text: 'Grubby Chest requires 57 Thieving',
+        type: 'info',
+        links: [{ text: 'Grubby Chest', url: 'https://oldschool.runescape.wiki/w/Grubby_chest' }],
+      },
+      { id: 's3-1', text: 'Assign the Max Hit keystone', type: 'keystone', pactImage: 'CBow_MaxHit_Pact.png' },
       { id: 's3-p2', text: '150 Lizardmen Shaman Kills', type: 'pact', points: 30 },
       {
         id: 's3-2',
         text: 'For Shayzien armour: EH barb fish until ~40 Strength — enough to prayer flick through. ~40 min at 15 sec per kill.',
         type: 'info',
+        links: [{ text: 'Shayzien armour', url: 'https://oldschool.runescape.wiki/w/Shayzien_armour' }],
       },
+      { id: 's3-keystone2', text: 'Assign the Double Accuracy Roll Keystone', type: 'keystone', pactImage: 'CBow_DoubleAccuracy_Roll_Pact.png' },
       { id: 's3-3', text: 'Train to 71 Crafting for Power Ammy + Blue Dragonhide set', type: 'step' },
       { id: 's3-4', text: 'Plant Hespori seed ASAP — ~6.4 hrs to grow', type: 'step' },
-      {
-        id: 's3-5',
-        text: 'Note: magic W water tree is worse here even with more points — do not invest in it yet.',
-        type: 'info',
-      },
     ],
     gearUpgrades: [
       {
         id: 's3-g1',
         label: 'Power Ammy + Blue Dragonhide',
-        items: [{ name: 'Power Amulet' }, { name: 'Blue Dragonhide Set' }],
-        howTo: 'Train to 71 Crafting',
+        items: [
+          { name: 'Power Amulet' },
+          { name: 'Blue Dragonhide Set', note: 'Obtained via transmutation' },
+        ],
+        howTo: 'Transmute for blue dragonhide, then train to 71 Crafting to craft',
       },
     ],
+    buildLink: 'https://www.osrsleaguescountdown.io/tree?name=..+v+start+cbow+12p',
+    buildLabel: '12p Build',
   },
 
-  // ─── Stage 4: Echo Bosses & Fire Cape ────────────────────────────────────────
+  // ─── Stage 5: Echo Bosses & Fire Cape ────────────────────────────────────────
   {
-    id: 4,
+    id: 5,
     title: 'Echo Bosses & Fire Cape',
     subtitle: 'Pacts 13–16',
     intro:
@@ -554,9 +587,9 @@ export const stages: Stage[] = [
     buildLabel: '16p Build',
   },
 
-  // ─── Stage 5: Prifddinas ─────────────────────────────────────────────────────
+  // ─── Stage 6: Prifddinas ─────────────────────────────────────────────────────
   {
-    id: 5,
+    id: 6,
     title: 'Prifddinas',
     subtitle: 'Pacts 17–18',
     intro:
@@ -582,9 +615,9 @@ export const stages: Stage[] = [
     gearUpgrades: [],
   },
 
-  // ─── Stage 6: Slayer & Equipment Push ────────────────────────────────────────
+  // ─── Stage 7: Slayer & Equipment Push ────────────────────────────────────────
   {
-    id: 6,
+    id: 7,
     title: 'Slayer & Equipment Push',
     subtitle: 'Pacts 19–25',
     intro:
@@ -622,9 +655,9 @@ export const stages: Stage[] = [
     buildLabel: '26p Build',
   },
 
-  // ─── Stage 7: Echo Thermy ────────────────────────────────────────────────────
+  // ─── Stage 8: Echo Thermy ────────────────────────────────────────────────────
   {
-    id: 7,
+    id: 8,
     title: 'Echo Thermy',
     subtitle: 'Pact 26',
     intro:
@@ -643,9 +676,9 @@ export const stages: Stage[] = [
     ],
   },
 
-  // ─── Stage 8: Final Equipment Push ───────────────────────────────────────────
+  // ─── Stage 9: Final Equipment Push ───────────────────────────────────────────
   {
-    id: 8,
+    id: 9,
     title: 'Final Equipment Push',
     subtitle: 'Pacts 27–31',
     intro:
@@ -689,9 +722,9 @@ export const stages: Stage[] = [
     buildLabel: '31p Build',
   },
 
-  // ─── Stage 9: End Game ───────────────────────────────────────────────────────
+  // ─── Stage 10: End Game ──────────────────────────────────────────────────────
   {
-    id: 9,
+    id: 10,
     title: 'End Game',
     subtitle: 'Pacts 32–40',
     intro:
