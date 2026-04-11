@@ -116,6 +116,11 @@ export const stages: Stage[] = [
         type: 'info',
       },
       {
+        id: 's1-pts2',
+        text: 'Get enough points for 2nd relic',
+        type: 'step',
+      },
+      {
         id: 's1-r2',
         text: 'Unlock Woodsman relic',
         type: 'relic',
@@ -123,13 +128,22 @@ export const stages: Stage[] = [
       },
       {
         id: 's1-arcuani',
-        text: "When you have gp from rumours, visit Arcuani's Archery Supplies to buy bows and ammo to level to 45 ranged",
+        text: "When you have gp from rumours, visit Arcuani's Archery Supplies to buy bows and ammo OR knives to level to 45 ranged",
         type: 'info',
         links: [
           {
             text: "Arcuani's Archery Supplies",
             url: 'https://oldschool.runescape.wiki/w/Arcuani%27s_Archery_Supplies',
           },
+        ],
+      },
+      {
+        id: 's1-traps',
+        text: 'You can get birdsnares and box traps from Fortis General Store or the Hunter Guild (requires 46 Hunter)',
+        type: 'info',
+        links: [
+          { text: 'Fortis General Store', url: 'https://oldschool.runescape.wiki/w/Fortis_General_Store' },
+          { text: 'Hunter Guild', url: 'https://oldschool.runescape.wiki/w/Hunter_Guild' },
         ],
       },
       {
@@ -206,12 +220,12 @@ export const stages: Stage[] = [
       },
       {
         id: 's1-2',
-        text: 'Get 43 Prayer (6,293 maingame xp) from 28 sunkissed bones — or transmute 28 regular bones to superior then bury',
+        text: 'Get 43 Prayer (6,293 maingame xp) from 28 sunkissed bones — or transmute 42 regular bones to superior then bury',
         type: 'step',
       },
       {
         id: 's1-3',
-        text: 'If tier 3+: only need 19 sunkissed + 28 regular bones. Might as well grab ranged & magic prayer too.',
+        text: 'If tier 3+: only need 19 sunkissed or 28 regular bones. Might as well grab ranged & magic prayer too (requires 45 Prayer).',
         type: 'info',
       },
       {
@@ -263,6 +277,12 @@ export const stages: Stage[] = [
         items: [{ name: 'Iron Arrows' }],
         howTo: "Buy from Arcuani's Archery Supplies in Varlamore",
       },
+      {
+        id: 's1-g3',
+        label: 'Iron / Steel Knives',
+        items: [{ name: 'Iron Knives' }, { name: 'Steel Knives', note: 'Better if available' }],
+        howTo: "Buy from Arcuani's Archery Supplies in Varlamore",
+      },
     ],
     buildLink:
       'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAIAAAAAAAAAAAAA&name=..%20v%20start%20cbow%205p',
@@ -278,29 +298,107 @@ export const stages: Stage[] = [
       'Unlock Kandarin first for Karamja access. Train Ranged for the Sunlight Hunter Bow, gear up for the kill style of your choice, then clear the Karamja pact tasks.',
     steps: [
       { id: 's2-1', text: 'Train Ranged to 45 (7,700 maingame xp — ~5,200 at relic 3 with 1.5× xp)', type: 'step' },
-      { id: 's2-2', text: 'Unlock Kandarin or Kourend and catch grey chins', type: 'step' },
-      { id: 's2-3', text: 'Train Ranged to 55 at Harpie Bug Swarms using grey chins', type: 'step' },
-      { id: 's2-4', text: 'Train Ranged to 65 at Harpie Bug Swarms using red chins', type: 'step' },
+      { id: 's2-1info', text: 'Can afk at gemstone crab', type: 'info' },
+      { id: 's2-slayer', text: 'Get 33 Slayer', type: 'step' },
+      {
+        id: 's2-slayerinfo',
+        text: 'Can combo this with training ranged, get task from any slayer master (may require unlocking a region)',
+        type: 'info',
+      },
+      {
+        id: 's2-lantern',
+        text: 'Buy Bug Lantern',
+        type: 'step',
+        links: [{ text: 'Bug Lantern', url: 'https://oldschool.runescape.wiki/w/Bug_lantern' }],
+      },
+      {
+        id: 's2-lanterninfo',
+        text: 'Required for damaging Harpie Bug Swarms',
+        type: 'info',
+        links: [{ text: 'Harpie Bug Swarms', url: 'https://oldschool.runescape.wiki/w/Harpie_Bug_Swarm' }],
+      },
+      {
+        id: 's2-skipinfo',
+        text: "Bug Lantern and 33 Slayer can be skipped if killing another region's multi combat monsters instead, e.g. Ankous in Catacombs of Kourend",
+        type: 'info',
+        links: [
+          { text: 'Ankous', url: 'https://oldschool.runescape.wiki/w/Ankou' },
+          { text: 'Catacombs of Kourend', url: 'https://oldschool.runescape.wiki/w/Catacombs_of_Kourend' },
+        ],
+      },
+      {
+        id: 's2-2',
+        text: 'Unlock Kandarin or Kourend and catch grey chins',
+        type: 'step',
+        links: [{ text: 'grey chins', url: 'https://oldschool.runescape.wiki/w/Grey_chinchompa' }],
+      },
+      { id: 's2-3', text: "Train Ranged to 55 at Harpie Bug Swarms/another region's multi combat monsters using grey chins", type: 'step' },
+      { id: 's2-4', text: "Train Ranged to 65 at Harpie Bug Swarms/another region's multi combat monsters using red chins", type: 'step' },
       { id: 's2-p6', text: 'Reach Combat Level 50', type: 'pact', points: 30 },
       { id: 's2-cmb', text: '50 Combat = 65 Ranged + 50 Hitpoints + 46 Prayer', type: 'info' },
+      {
+        id: 's2-shcb',
+        text: 'Create a Sunlight Hunter Crossbow',
+        type: 'step',
+        links: [{ text: 'Sunlight Hunter Crossbow', url: 'https://oldschool.runescape.wiki/w/Sunlight_hunter_crossbow' }],
+      },
+      {
+        id: 's2-shcbinfo',
+        text: 'Hunter crossbow + sunlight antelope antler — requires 74 Fletching',
+        type: 'info',
+      },
+      {
+        id: 's2-shcbcharter',
+        text: 'You can buy a hunter crossbow from Sunset Coast charter shop',
+        type: 'info',
+        links: [{ text: 'Sunset Coast charter shop', url: 'https://oldschool.runescape.wiki/w/Sunset_Coast' }],
+      },
+      {
+        id: 's2-mab',
+        text: 'Gather moonlight antler bolts (at least 500)',
+        type: 'step',
+      },
+      {
+        id: 's2-mabinfo',
+        text: 'Make these by catching Moonlight antelopes and using a chisel on the antlers',
+        type: 'info',
+        links: [{ text: 'Moonlight antelopes', url: 'https://oldschool.runescape.wiki/w/Moonlight_antelope' }],
+      },
+      {
+        id: 's2-6',
+        text: 'Complete the Death on the Isle quest',
+        type: 'step',
+        links: [{ text: 'Death on the Isle', url: 'https://oldschool.runescape.wiki/w/Death_on_the_Isle' }],
+      },
+      { id: 's2-6info', text: 'Awards 40k Crafting xp', type: 'info' },
       {
         id: 's2-5',
         text: 'Get 63 Crafting via shopping or gem mining in Karamja — transmute to highest gem cuttable',
         type: 'step',
+        links: [{ text: 'shopping', url: "https://oldschool.runescape.wiki/w/Toci%27s_Gem_Store" }],
       },
-      { id: 's2-6', text: 'Complete the Death on the Isle quest', type: 'step' },
+      { id: 's2-5a', text: '43–55 takes 136/91 uncut diamonds at 8x/12x', type: 'info' },
+      { id: 's2-5b', text: '55–63 takes 184/123 uncut dragonstones at 8x/12x', type: 'info' },
       {
         id: 's2-7',
         text: 'Craft Green Dragonhide set (body, vbrace, legs, shield) after transmuting',
         type: 'step',
       },
+      {
+        id: 's2-7info',
+        text: 'Tan the dragonhide at Chouani',
+        type: 'info',
+        links: [{ text: 'Chouani', url: 'https://oldschool.runescape.wiki/w/Chouani' }],
+      },
       { id: 's2-8', text: 'Craft Snakeskin Boots after transmuting', type: 'step' },
       { id: 's2-9', text: 'Craft a Coif', type: 'step' },
       {
         id: 's2-10',
-        text: 'Optional: 70 Crafting for Power Ammy — 63-70 via dragonstones (8x = 336 gems, 12x = 224)',
+        text: 'Optional: 70 Crafting for Power Ammy',
         type: 'step',
       },
+      { id: 's2-10info', text: '63–70 via dragonstones: 8x = 336 gems, 12x = 224 gems', type: 'info' },
+      { id: 's2-p1', text: '1 Hueycoatl Kill', type: 'pact', points: 80 },
       {
         id: 's2-11',
         text: 'Mage route (3.5 DPS): 70 Magic for Earth Wave, buy Earth Staff from Auburnvale, get Full Mystic if Kandarin is unlocked. Needs ~8hrs of transmutes.',
@@ -311,9 +409,20 @@ export const stages: Stage[] = [
         text: 'Range route is ~1.3 DPS at Huey with prayer up. Mage is ~3.5 DPS — significantly better if you can afford the transmutes.',
         type: 'info',
       },
-      { id: 's2-p1', text: '1 Hueycoatl Kill', type: 'pact', points: 80 },
+      {
+        id: 's2-hueyworld',
+        text: 'Try worlds with high population — Huey can be massed so more people the better',
+        type: 'info',
+      },
       { id: 's2-p2', text: 'Defeat a Steel Dragon on Karamja', type: 'pact', points: 30 },
+      {
+        id: 's2-p2info',
+        text: 'You can get an anti-dragon shield from any slayer master in leagues',
+        type: 'info',
+        links: [{ text: 'any slayer master', url: 'https://oldschool.runescape.wiki/w/Slayer_Equipment_(shop)' }],
+      },
       { id: 's2-p3', text: 'Defeat a TzHaar', type: 'pact', points: 30 },
+      { id: 's2-p3info', text: 'Can safespot or just pray against style', type: 'info' },
       {
         id: 's2-p4',
         text: 'Defeat a Demonic Gorilla',
@@ -328,6 +437,20 @@ export const stages: Stage[] = [
       },
     ],
     gearUpgrades: [
+      {
+        id: 's2-g0a',
+        label: 'Sunlight Hunter Crossbow',
+        items: [{ name: 'Sunlight Hunter Crossbow', note: 'Major ranged upgrade' }],
+        howTo: 'Hunter crossbow + sunlight antelope antler — requires 74 Fletching',
+        links: [{ label: 'Wiki', url: 'https://oldschool.runescape.wiki/w/Sunlight_hunter_crossbow' }],
+      },
+      {
+        id: 's2-g0b',
+        label: 'Moonlight Antler Bolts',
+        items: [{ name: 'Moonlight Antler Bolts', note: 'At least 500' }],
+        howTo: 'Catch Moonlight antelopes and use a chisel on the antlers',
+        links: [{ label: 'Moonlight antelope', url: 'https://oldschool.runescape.wiki/w/Moonlight_antelope' }],
+      },
       {
         id: 's2-g1',
         label: 'Green Dragonhide Set',
