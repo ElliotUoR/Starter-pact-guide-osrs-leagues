@@ -1,4 +1,10 @@
-export type StepType = 'pact' | 'step' | 'info' | 'warning';
+export type StepType = 'pact' | 'step' | 'info' | 'warning' | 'relic';
+
+export interface StepLink {
+  /** The substring of `text` to turn into a hyperlink */
+  text: string;
+  url: string;
+}
 
 export interface Step {
   id: string;
@@ -6,6 +12,10 @@ export interface Step {
   type: StepType;
   points?: number;
   isReset?: boolean;
+  /** Relic image filenames from /images/relics/ to display after the text */
+  relics?: string[];
+  /** Inline hyperlinks — each entry wraps a substring of `text` in an anchor tag */
+  links?: StepLink[];
 }
 
 export interface GearItem {
@@ -85,23 +95,110 @@ export const stages: Stage[] = [
     steps: [
       { id: 's1-p1', text: 'Complete the Leagues Tutorial', type: 'pact', points: 10 },
       { id: 's1-p2', text: 'Open the Leagues Menu', type: 'pact', points: 10 },
-      { id: 's1-p3', text: 'Defeat a Hill Giant', type: 'pact', points: 10 },
-      { id: 's1-p4', text: 'Reach Combat Level 50', type: 'pact', points: 30 },
-      { id: 's1-p5', text: 'Use the Protect from Melee Prayer', type: 'pact', points: 30 },
+      {
+        id: 's1-r1',
+        text: 'Unlock first relic — Endless Harvest recommended',
+        type: 'relic',
+        relics: ['Endless_Harvest.png', 'Barbarian_Gathering.png', 'Abundance.png'],
+      },
+      {
+        id: 's1-p3',
+        text: 'Defeat a Hill Giant',
+        type: 'pact',
+        points: 10,
+        links: [{ text: 'Hill Giant', url: 'https://oldschool.runescape.wiki/w/Hill_Giant' }],
+      },
+      {
+        id: 's1-hginfo',
+        text: 'Hill Giants are found in south Avium Savannah and have a 25% earth weakness.',
+        type: 'info',
+      },
+      {
+        id: 's1-r2',
+        text: 'Unlock Woodsman relic',
+        type: 'relic',
+        relics: ['Woodsman.png'],
+      },
+      {
+        id: 's1-arcuani',
+        text: "When you have gp from rumours, visit Arcuani's Archery Supplies to buy bows and ammo to level to 45 ranged",
+        type: 'info',
+        links: [
+          {
+            text: "Arcuani's Archery Supplies",
+            url: 'https://oldschool.runescape.wiki/w/Arcuani%27s_Archery_Supplies',
+          },
+        ],
+      },
       {
         id: 's1-1',
         text: 'Get 91 Hunter and 74 Fletching — transmute EH logs or use rumour sack logs for quick xp',
         type: 'step',
       },
       {
+        id: 's1-pts3',
+        text: 'Get enough points for 3rd relic',
+        type: 'step',
+      },
+      {
+        id: 's1-r3',
+        text: 'Unlock Bank Heist, Evil Eye, Map of Alacrity',
+        type: 'relic',
+        relics: ['Bank_Heist.png', 'Evil_Eye.png', 'Map_of_Alacrity.png'],
+      },
+      {
+        id: 's1-mapinfo',
+        text: 'Map of Alacrity has convenient teleports for red chins and varlamore tree patch',
+        type: 'info',
+      },
+      {
+        id: 's1-pts4',
+        text: 'Get enough points for 4th relic',
+        type: 'step',
+      },
+      {
+        id: 's1-pts4info',
+        text: 'Get 99 hunter and level fletching higher for points if there are tasks',
+        type: 'info',
+      },
+      {
+        id: 's1-r4',
+        text: 'Unlock Transmutation',
+        type: 'relic',
+        relics: ['Transmutation.png'],
+      },
+      {
+        id: 's1-transinfo',
+        text: "After unlocking use rumour money to buy runes to transmute, e.g. 12k fire runes will take an hour to convert to 12k chaos runes",
+        type: 'info',
+        links: [
+          { text: 'buy runes', url: 'https://oldschool.runescape.wiki/w/Tal_Teklan_Rune_Shop' },
+        ],
+      },
+      {
         id: 's1-2',
-        text: 'Get 43 Prayer (6,293 maingame xp) from 28 sunkissed bones — or transmute to superior and bury 42 regular bones',
+        text: 'Get 43 Prayer (6,293 maingame xp) from 28 sunkissed bones — or transmute 28 regular bones to superior then bury',
         type: 'step',
       },
       {
         id: 's1-3',
         text: 'If tier 3+: only need 19 sunkissed + 28 regular bones. Might as well grab ranged & magic prayer too.',
         type: 'info',
+      },
+      {
+        id: 's1-boneinfo',
+        text: 'To bury sunkissed bones, break them into shards with a chisel, then sacrifice with blessed wine at the Libation bowl',
+        type: 'info',
+        links: [
+          { text: 'blessed wine', url: 'https://oldschool.runescape.wiki/w/Jug_of_blessed_wine' },
+          { text: 'Libation bowl', url: 'https://oldschool.runescape.wiki/w/Libation_bowl' },
+        ],
+      },
+      { id: 's1-p5', text: 'Use the Protect from Melee Prayer', type: 'pact', points: 30 },
+      {
+        id: 's1-seeds',
+        text: 'Setup seeds and saplings for farming, use transmute to obtain desired amount of seeds (and supercompost) below',
+        type: 'step',
       },
       {
         id: 's1-4',
@@ -120,16 +217,24 @@ export const stages: Stage[] = [
       },
       {
         id: 's1-7',
-        text: 'Sapling quantities (normal trees): Oak x3+1, Willow x4+1, Maple x6+2, Yew x2+1',
-        type: 'info',
-      },
-      {
-        id: 's1-8',
-        text: 'Sapling quantities (fruit trees): Apple, Curry, Pineapple, Papaya — all x1+1. Papaya is your last critical run, always bring a spare.',
+        text: 'See the sapling quantity table below — always bring the recommended spares',
         type: 'info',
       },
     ],
-    gearUpgrades: [],
+    gearUpgrades: [
+      {
+        id: 's1-g1',
+        label: 'Shortbow',
+        items: [{ name: 'Shortbow' }],
+        howTo: "Buy from Arcuani's Archery Supplies in Varlamore",
+      },
+      {
+        id: 's1-g2',
+        label: 'Iron Arrows',
+        items: [{ name: 'Iron Arrows' }],
+        howTo: "Buy from Arcuani's Archery Supplies in Varlamore",
+      },
+    ],
     buildLink:
       'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAIAAAAAAAAAAAAA&name=..%20v%20start%20cbow%205p',
     buildLabel: '5p Build',
@@ -143,10 +248,12 @@ export const stages: Stage[] = [
     intro:
       'Unlock Kandarin first for Karamja access. Train Ranged for the Sunlight Hunter Bow, gear up for the kill style of your choice, then clear the Karamja pact tasks.',
     steps: [
-      { id: 's2-1', text: 'Train Ranged to 45 (7,700 maingame xp)', type: 'step' },
+      { id: 's2-1', text: 'Train Ranged to 45 (7,700 maingame xp — ~5,200 at relic 3 with 1.5× xp)', type: 'step' },
       { id: 's2-2', text: 'Unlock Kandarin or Kourend and catch grey chins', type: 'step' },
       { id: 's2-3', text: 'Train Ranged to 55 at Harpie Bug Swarms using grey chins', type: 'step' },
       { id: 's2-4', text: 'Train Ranged to 65 at Harpie Bug Swarms using red chins', type: 'step' },
+      { id: 's2-p6', text: 'Reach Combat Level 50', type: 'pact', points: 30 },
+      { id: 's2-cmb', text: '50 Combat = 65 Ranged + 50 Hitpoints + 46 Prayer', type: 'info' },
       {
         id: 's2-5',
         text: 'Get 63 Crafting via shopping or gem mining in Karamja — transmute to highest gem cuttable',

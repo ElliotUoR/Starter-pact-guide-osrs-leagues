@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { stages } from '@/data/guideData';
 import { useProgress, useCurrentStage } from '@/hooks/useProgress';
 import StageView from '@/components/StageView';
@@ -18,11 +18,18 @@ export default function GuidePage() {
       if (next < 0 || next >= TOTAL_STAGES) return;
       setAnimDir(dir === 'next' ? 'right' : 'left');
       setStage(next);
-      // Clear animation class after it plays
-      setTimeout(() => setAnimDir(null), 300);
     },
     [stageIndex, setStage],
   );
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') navigate('next');
+      if (e.key === 'ArrowLeft') navigate('prev');
+    };
+    globalThis.addEventListener('keydown', handleKeyDown);
+    return () => globalThis.removeEventListener('keydown', handleKeyDown);
+  }, [navigate]);
 
   const handleReset = useCallback(() => {
     reset();
@@ -51,6 +58,7 @@ export default function GuidePage() {
 
   return (
     <StageView
+      key={stageIndex}
       stage={currentStage}
       stageIndex={stageIndex}
       totalStages={TOTAL_STAGES}

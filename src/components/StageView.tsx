@@ -1,21 +1,22 @@
 'use client';
 
-import { Stage, TOTAL_PACTS } from '@/data/guideData';
+import { Stage, TOTAL_PACTS, stages } from '@/data/guideData';
 import ChecklistItem from './ChecklistItem';
 import PactPanel from './PactPanel';
 import GearPanel from './GearPanel';
+import FarmingTable from './FarmingTable';
 
 interface Props {
-  stage: Stage;
-  stageIndex: number;
-  totalStages: number;
-  progress: Record<string, boolean>;
-  onToggle: (id: string) => void;
-  onPrev: () => void;
-  onNext: () => void;
-  onReset: () => void;
-  animDir: 'left' | 'right' | null;
-  totalPactsCompleted: number;
+  readonly stage: Stage;
+  readonly stageIndex: number;
+  readonly totalStages: number;
+  readonly progress: Record<string, boolean>;
+  readonly onToggle: (id: string) => void;
+  readonly onPrev: () => void;
+  readonly onNext: () => void;
+  readonly onReset: () => void;
+  readonly animDir: 'left' | 'right' | null;
+  readonly totalPactsCompleted: number;
 }
 
 export default function StageView({
@@ -33,12 +34,9 @@ export default function StageView({
   const pactSteps = stage.steps.filter((s) => s.type === 'pact');
   const isOverview = stage.id === 0;
 
-  const animClass =
-    animDir === 'right'
-      ? 'animate-slide-in-right'
-      : animDir === 'left'
-      ? 'animate-slide-in-left'
-      : 'animate-fade-in';
+  let animClass = '';
+  if (animDir === 'right') animClass = 'animate-slide-in-right';
+  else if (animDir === 'left') animClass = 'animate-slide-in-left';
 
   return (
     <div className={`flex flex-col h-screen bg-osrs-bg text-osrs-parchment ${animClass}`}>
@@ -57,18 +55,29 @@ export default function StageView({
 
         {/* Stage dots */}
         <div className="flex items-center gap-1.5">
-          {Array.from({ length: totalStages }).map((_, i) => (
-            <div
-              key={i}
-              className={`rounded-full transition-all duration-300 ${
-                i === stageIndex
-                  ? 'w-4 h-2.5 bg-osrs-gold'
-                  : i < stageIndex
-                  ? 'w-2 h-2 bg-osrs-gold-dim'
-                  : 'w-2 h-2 bg-osrs-border'
-              }`}
-            />
-          ))}
+          {stages.map((s, i) => {
+            let dotClass = 'w-2 h-2 bg-osrs-border';
+            if (i === stageIndex) dotClass = 'w-4 h-2.5 bg-osrs-gold';
+            else if (i < stageIndex) dotClass = 'w-2 h-2 bg-osrs-gold-dim';
+            return (
+              <div
+                key={s.id}
+                className={`rounded-full transition-all duration-300 ${dotClass}`}
+              />
+            );
+          })}
+        </div>
+
+        {/* Pacts counter */}
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded border border-red-900/60 bg-red-950/40">
+          <svg className="w-3.5 h-3.5 text-red-400 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.2l4-.6L8 1z" />
+          </svg>
+          <div className="flex items-baseline gap-1">
+            <span className="text-lg font-bold text-red-400 leading-none tabular-nums">{totalPactsCompleted}</span>
+            <span className="text-[11px] text-red-700 font-mono">/ {TOTAL_PACTS}</span>
+          </div>
+          <span className="text-[10px] text-red-700 uppercase tracking-wide leading-none">Pacts</span>
         </div>
 
         {/* Reset button */}
@@ -147,6 +156,7 @@ export default function StageView({
                 />
               ))
             )}
+            {stage.id === 1 && <FarmingTable />}
           </div>
         </section>
 
