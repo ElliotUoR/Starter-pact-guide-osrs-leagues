@@ -1,0 +1,135 @@
+===================================================
+  OSRS LEAGUES - FARMING GUIDE: LEVEL 15 → 65
+===================================================
+
+SETUP
+-----
+- 1 Tree patch, 1 Fruit tree patch
+- 8x XP multiplier (league bonus)
+- 5x faster growth (league bonus)
+
+XP NEEDED
+---------
+Level 15 = 2,411 XP
+Level 65 = 449,428 XP
+Total to gain: 447,017 XP
+
+===================================================
+  TREE XP REFERENCE (with 8x bonus)
+===================================================
+
+NORMAL TREES (grow times are 5x faster)
+  Oak     (lvl 15) | 3,850.4 XP  | 32 min grow
+  Willow  (lvl 30) | 11,852 XP   | 48 min grow
+  Maple   (lvl 45) | 27,587.2 XP | 64 min grow
+  Yew     (lvl 60) | 57,207.2 XP | 80 min grow
+
+FRUIT TREES (all 192 min / 3h 12m grow, 5x faster)
+  Apple      (lvl 27) | 10,180 XP
+  Banana     (lvl 33) | 14,732 XP    <-- SKIPPED*
+  Orange     (lvl 39) | 20,693.6 XP  <-- SKIPPED*
+  Curry      (lvl 42) | 24,295.2 XP
+  Pineapple  (lvl 51) | 38,333.6 XP
+  Papaya     (lvl 57) | 51,043.2 XP
+
+*Banana and Orange are skipped entirely. By the time the fruit
+ patch is free for a second run, you're already level 44 and
+ curry (lvl 42) gives more XP than either.
+
+===================================================
+  SEEDS NEEDED (TOTAL)
+===================================================
+
+  With supercompost and no farmer payment, each tree has roughly
+  a 10% chance of dying per run. Insurance assumes: if one dies,
+  the replacement will survive (no double-death budgeting).
+
+  Normal Trees:
+    Oak saplings    x3  (+1)  -- 27% chance at least one of 3 dies
+    Willow saplings x4  (+1)  -- 34% chance at least one of 4 dies
+    Maple saplings  x6  (+2)  -- 47% chance at least one of 6 dies; nearly a coin flip, definitely bring one
+    Yew saplings    x2  (+1)  -- 19% chance; low odds but yew takes 80 min so losing one hurts
+
+  Fruit Trees:
+    Apple sapling     x1  (+1)  -- 10% chance; low but a failed run costs 3h 12m
+    Curry sapling     x1  (+1)  -- 10% chance; same logic
+    Pineapple sapling x1  (+1)  -- 10% chance; same logic
+    Papaya sapling    x1  (+1)  -- 10% chance; this is your final critical run, always bring a spare
+
+===================================================
+  TIMELINE (minutes from start)
+===================================================
+
+T+0 min   | START | Lvl 15 | 2,411 XP
+  > [TREE]  Plant Oak
+
+T+32 min  | Lvl 18 | 6,261 XP
+  > [TREE]  Harvest Oak (+3,850) | Plant Oak
+
+T+64 min  | ** LEVEL 27 UNLOCKED ** | 10,112 XP
+  > [TREE]  Harvest Oak (+3,850) | Plant Oak
+  > [FRUIT] Plant Apple (first fruit tree run!)
+
+T+96 min  | ** LEVEL 30 UNLOCKED ** | 13,962 XP
+  > [TREE]  Harvest Oak (+3,850) | Plant Willow (upgrade!)
+
+T+144 min | Lvl 36 | 25,814 XP
+  > [TREE]  Harvest Willow (+11,852) | Plant Willow
+
+T+192 min | Lvl 40 | 37,666 XP
+  > [TREE]  Harvest Willow (+11,852) | Plant Willow
+
+T+240 min | Lvl 42 | 49,518 XP
+  > [TREE]  Harvest Willow (+11,852) | Plant Willow
+
+T+256 min | Lvl 44 | 59,698 XP
+  > [FRUIT] Harvest Apple (+10,180) | Plant Curry (best available at lvl 44)
+
+T+288 min | ** LEVEL 45 UNLOCKED ** | 71,550 XP
+  > [TREE]  Harvest Willow (+11,852) | Plant Maple (upgrade!)
+
+T+352 min | Lvl 49 | 99,137 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Maple
+
+T+416 min | Lvl 52 | 126,725 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Maple
+
+T+448 min | ** LEVEL 51+ REACHED ** | 151,020 XP
+  > [FRUIT] Harvest Curry (+24,295) | Plant Pineapple (best available at lvl 54)
+
+T+480 min | Lvl 55 | 178,607 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Maple
+
+T+544 min | ** LEVEL 57 UNLOCKED ** | 206,194 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Maple (fruit patch still busy)
+
+T+608 min | Lvl 58 | 233,781 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Maple
+
+T+640 min | Lvl 59 | 272,115 XP
+  > [FRUIT] Harvest Pineapple (+38,334) | Plant Papaya (best available at lvl 59)
+
+T+672 min | ** LEVEL 60 UNLOCKED ** | 299,702 XP
+  > [TREE]  Harvest Maple (+27,587) | Plant Yew (upgrade!)
+
+T+752 min | Lvl 62 | 356,909 XP
+  > [TREE]  Harvest Yew (+57,207) | Plant Yew
+
+T+832 min | ** LEVEL 65 REACHED ** | 465,160 XP  ✓
+  > [TREE]  Harvest Yew (+57,207)
+  > [FRUIT] Harvest Papaya (+51,043)  ← pushes you over the line
+
+===================================================
+  SUMMARY
+===================================================
+
+Total time:     832 minutes (~13 hours 52 minutes)
+Total XP gained: 462,749
+Final XP:        465,160 (overshoots by ~16k — no wasted runs)
+
+XP from normal trees: 338,897
+XP from fruit trees:  123,852
+
+NOTE: The Yew and Papaya harvests happen simultaneously at T+832.
+      Even the Yew alone (XP: 414,117 = lvl 64) isn't enough —
+      you need both harvests to cross the level 65 threshold (449,428).

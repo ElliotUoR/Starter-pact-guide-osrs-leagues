@@ -1,0 +1,246 @@
+Idea: kandarin echo weapons and prayer gear enable crazy synergy where you will always max hit + ele weakness
+therefore get 50 prayer bonus and always max hit
+issue: mage accuracy falls flat against varvordis, sol, etc...
+solution: air setup is cheap, hybrid for melee
+Elliot — Yesterday at 22:03
+why melee: melee has the best counterpart to magic, often performing where mage doesnt e.g. tekton, sol, vard
+exceptions: olm head still wants range - rune cbow, tbow, dhunter cbow, all seem best here 
+Elliot — 02:40
+example final loadout
+https://tools.runescape.wiki/osrs-dps-staging?id=WeepingYeastKrandorian
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+Take all accuracy nodes, dip into melee speed attacks
+Elliot — 02:49
+Guide:
+Regions - Kandarin, Kourend, Priff
+(We want kourend for slayer - so make sure you have it by t6 - however its the worst region of the three for pacts)
+Elliot — 03:03
+This guide only covers assumed progress not relic picks
+NOTE: low point tasks are super important as we want to unlock all regions asap
+First tasks:
+Complete the Leagues Tutorial (10 points)
+Open the Leagues Menu (10 points)
+Defeat a Hill Giant (10 points)
+Reach Combat Level 50 (30 points)
+Use the Protect from Melee Prayer (30 points)
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAIAAAAAAAAAAAAA&name=..%20v%20start%20cbow%205p) 
+.. v start cbow 5p (5/40 pts) - Demonic Pacts Build
+.. v start cbow 5p — a 5/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.. v start cbow 5p (5/40 pts) - Demonic Pacts Build
+You will want likely have got 91 hunter and 74 fletching (transmute EH logs, or rumour sack logs for quick xp)
+Elliot — 03:11
+Get 43 Prayer (6293 maingame xp) from sunkissed bones (28)  (OR transmute to superior and bury 42 regular bones - can be gathered from hunter?)
+If tier 3+ only need: 19 sunkissed, 28 regular bones 😀 might aswell get ranged + magic prayer
+VERY IMPORTANT make sure we are planting the seeds gathered from hunter so we can get 65 farming ASAP
+Varla has: (Need 449k xp) (391k - teak)
+1 tree patch - variable (oaks (3.85k) - 32 mins, willow (11.8k) 48, maple (27.2k) 64, yew (57.2k) 80)
+1 fruit tree patch - 3.2 hours -  apple (10,180), banana (14,732), orange (20,693.6), curry (24,295.2), pineapple (38,333.6), papaya (51,043.2)
+1 hardwood patch - 15 hours (get teak planted day 1) for 58320
+1 allot/herb/flower patch
+Track these with notifications on!!!! Use supercompost
+
+  Normal Trees:
+    Oak saplings    x3  (+1)  -- 27% chance at least one of 3 dies
+    Willow saplings x4  (+1)  -- 34% chance at least one of 4 dies
+    Maple saplings  x6  (+2)  -- 47% chance at least one of 6 dies; nearly a coin flip, definitely bring one
+    Yew saplings    x2  (+1)  -- 19% chance; low odds but yew takes 80 min so losing one hurts
+
+  Fruit Trees:
+    Apple sapling     x1  (+1)  -- 10% chance; low but a failed run costs 3h 12m
+    Curry sapling     x1  (+1)  -- 10% chance; same logic
+    Pineapple sapling x1  (+1)  -- 10% chance; same logic
+    Papaya sapling    x1  (+1)  -- 10% chance; this is your final critical run, always bring a spare 
+Elliot — 03:28
+Huey
+For sunlight hunter bow you want 65 ranged therefore ONCE COMPLETED HUNTER:
+train range to 45 (7700 mg.xp)
+Unlock kandarin or kourend - catch grey chins
+Train to 55 at harpie bug swarms using grey chins
+Train to 65 at harpie bug swarms using red chins
+
+Now kill huey - go mage or range route
+
+Range gear:
+63 crafting via shopping or gem mining (karamja) + transmute to highest cuttable + do death on the isle QUEST
+43-55 crafting diamonds - 8x = 136, 12x = 91
+55-63 dstones - 8x = 184, 12x = 123
+Transmute for green dhide then craft body, vbrace, legs, shield
+Transmute for snakeskin and craft boots
+And a Coif
+
+Can goto 70 crafting for power ammy 63-70 (dstones) - 8x = 336, 12x  224
+
+Note this is only 1.3 dps at huey with prayer up
+
+Magic setup: 70 magic for earth wave
+Earth staff, buy from auburnvale shop
+(If unlocked kandarin) 
+get full mystic
+
+Power ammy, same as above
+
+With prayers and same range tree this is 3.5 dps (mage tree would have same dps at this point)
+
+1 Hueycoatl Kill (80 Points) (Can do tasks below if unlocked region)
+(Note for mage huey kill with earth wave you will want to do ~8 hours of transmutes) 
+Elliot — 03:51
+Assumming unlock Kandarin first and therefore Karamja-
+Defeat a Steel Dragon on Karamja (30 Points)
+Defeat a TzHaar (30 Points)
+You will have demonic gorilla and mithril dragon tasks:
+Defeat a Demonic Gorilla (80 Points) - Can do this one before huey
+Defeat a Mithril Dragon (80 Points) - Can also do it before huey (range is slightly better) - Pray melee, bring good food (hits 18s)
+You will now have 10 points 
+Elliot — 04:02
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAAACQAEAA&name=..%20v%20start%20cbow%2010p) 
+.. v start cbow 10p (10/40 pts) - Demonic Pacts Build
+.. v start cbow 10p — a 10/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.. v start cbow 10p (10/40 pts) - Demonic Pacts Build
+8p here for the 70% node isnt great, sometimes a tiny dps loss but its best path to good keystones
+At this point you will kourend and priff to realistically progress, assuming kourend second:
+Open 1 Grubby Chest (10 Points) 
+Assign max hit keystone
+150 Lizardmen Shaman Kills (30 Points) 
+For shayzien armour do some EH barb fishing until good enough strength ~40 strength should be enough to prayer flick through
+150 kills should be about ~15 seconds each so this will take 40 mins MINIMUM, put this off if slayer is not urgent rush 
+Elliot — 04:10
+Notably magic W water tree is worse here even with more points
+From here onwards I recommend getting 71 crafting for power ammy and blue dhide
+Plant hespori seed asap it takes about 6.4 hrs to grow 
+Elliot — 04:48
+These 12 points are by far the easiest to get than counter parts, you can do fire cape but personally you will save more time getting max hit first, here are the options for the onwards points (need 16):
+
+Kill 1 unique Echo Boss (80 points + Reset)
+Kill 2 unique Echo Bosses (80 points + Reset)
+Kill echo amox - normal amox will be about 123 seconds at 75 ranged here with blue dhide
+Diffcult to say how easy this will be, boss looks relatively simple.
+Also kill echo hespori (bring chins) this looks manageable just bring food and prayers - MUCH easier will a mage build on 3t staff
+
+Thermo nuclear devil should be doable but you wont have 90+ slayer XD
+
+Killing one should make it easy to kill the other as you will unlock max hit. From here you will be strong enough to do the following 
+Elliot — 04:56
+Equip a Fire Cape (200 Points)
+Complete Tzhaar-Ket-Rek's third challenge (80 Points)
+
+I would expect that you should have t6 relic and 3rd region at similar times, although likely 6th relic first 
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAACGQAMAs&name=..%20v%20start%20cbow%2016p) 
+.. v start cbow 16p (16/40 pts) - Demonic Pacts Build
+.. v start cbow 16p — a 16/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.. v start cbow 16p (16/40 pts) - Demonic Pacts Build
+Elliot — 05:27
+should be obivous from here, respec when done with slayer into magic
+Upon unlocking priff:
+Kill a Black Dragon in Tirannwn (30 Points)
+Complete the Corrupted Gauntlet (80 Points) 
+Elliot — 14:01
+Things to consider:
+Remember to spam rannarrs + snapegrass, we will want prayer sustain
+Transmute + cook raw fish to best hp 
+You will want 70 smithing for zalcano.. how to train?
+You will want 89 crafting for zenyte, training this in priff will require 70 smithing and crafting.
+Ore transmute? Or iron, assuming you have 12x xp at this point you will need 61.5k mg.xp
+Scrambled Quest for 5k smithing xp 
+Slayer tasks  + zalcano should take you roughly to 25/26 points for this great hybrid build
+
+Defeat Zalcano (80 Points)
+Equip a Dark Bow in Tirannwn (80 Points)
+1 Skotizo Kill (80 Points)
+Defeat the Kraken Boss 50 Times (80 Points)
+Equip a Trident of the Seas (80 Points)
+Equip an Abyssal Tentacle (200 Points)
+Equip an Occult Necklace (200 Points)
+
+(https://www.osrsleaguescountdown.io/tree?share=1BQDAAgAAAMCAAQAGLG8AMA8&name=..%20v%20start%20cbow%2026p) 
+.. v start cbow 26p (26/40 pts) - Demonic Pacts Build
+.. v start cbow 26p — a 26/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.. v start cbow 26p (26/40 pts) - Demonic Pacts Build
+Elliot — 14:19
+If only 25p I would drop echo throw
+GET 95 SLAYER FOR HYDRAS 
+At this point you prob want to respec to kill echo thermy 
+Elliot — 14:35
+Farm antler guard from slayer if not done already, as its massive for offhand
+Kill echo thermy on task with this build and setup (dont forget prayers)
+https://dps.osrs.wiki/?id=SpinachCoconutEssence
+(https://www.osrsleaguescountdown.io/tree?share=1yxgAD2MDANARBAIAAIAAAAA&name=.!%20Air%20Prayer%2025p) 
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+.! Air Prayer 25p (25/40 pts) - Demonic Pacts Build
+.! Air Prayer 25p — a 25/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.! Air Prayer 25p (25/40 pts) - Demonic Pacts Build
+Elliot — 14:53
+After echo thermy you will have 26 points 
+Kill 3 unique Echo Bosses (80 points + Reset)
+for Farming remaing points to unlock melee you will want 32 points do following tasks:
+Craft a Toxic Blowpipe (200 Points)
+Use a prayer altar to restore 90 prayer in Prifddinas (200 Points)
+
+Do echo hunleff (take trident node)
+Equip a Corrupted Weapon (400 Points)
+Kill 4 unique Echo Bosses (200 points)
+
+If possible get an armour seed, then thieve until 99 craft/smith
+Equip Some Zenyte Jewelry (200 Points) - partial hybrid melee build is good enough 
+Elliot — 15:07
+Final tasks
+You know have 31 points for the following
+(https://www.osrsleaguescountdown.io/tree?share=1y5gID2MDEdIRBEIAAIAAAAA&name=.!%20Air%20Prayer%2031p)
+
+sol loadout - farm perilous moons - https://dps.osrs.wiki/?id=SanguineGourdCake
+You will need to train melees at this point it will be about 18x xp so not too bad 
+.! Air Prayer 31p (31/40 pts) - Demonic Pacts Build
+.! Air Prayer 31p — a 31/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.! Air Prayer 31p (31/40 pts) - Demonic Pacts Build
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+Complete Wave 12 of Fortis Colosseum (200 Points)
+Take accuracy node after this kill 
+We 4 points for water spell healing (36) 
+Upgrades really count at this point, lets go for one of two builds, Spam clues and 2 zenytes for this
+https://dps.osrs.wiki/?id=BlacksmithsSilverBetrayal 
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+Elliot — 15:15
+Now gonna be able to do the following: (T8 relic is great around now - minion right XD) - take water upgrades 
+25 Chambers of Xeric (80 Points) - stay for below, do normals until augury, preserve is also a great upgrade
+Equip any Ancestral Piece (200 Points)
+Equip a Dragon Hunter Lance (200 Points)
+Equip Avernic Treads (200 Points) - 100% stay for conflicts
+
+(https://www.osrsleaguescountdown.io/tree?share=1y5kID2MDE9IRDEYAAIABAAA&name=.!%20Air%20Prayer%2036p) 
+.! Air Prayer 36p (36/40 pts) - Demonic Pacts Build
+.! Air Prayer 36p — a 36/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.! Air Prayer 36p (36/40 pts) - Demonic Pacts Build
+Elliot — 15:33
+You should now have following gear & farm sol for prayer & also kill echo hunleff - do cox for anc top or bottom
+https://dps.osrs.wiki/?id=GarmentsDressingPulley
+https://dps.osrs.wiki/?id=SteamPineFenkenstrain 
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+This is good enough for awakened vard, take water healing, as you are about to go inferno
+Defeat Awakened Vardorvis (200 Points) 
+Do inferno, take another minor accuracy node
+Equip an Infernal Cape (400 Points) 
+Complete Tzhaar-Ket-Rek's Special challenge (400 Points) - Pre pot if possible with water healing
+Take final minor accuracy node when done
+Equip a piece of Radiant Oathplate (200 Points) - might not be as hard as it seems, still need to farm the contracts
+Take +1% magic damage node to finish
+Now farm devout boots, anc body, get ardy 4 if not already and build is done
+https://dps.osrs.wiki/?id=VolumeMailImcandorias
+DPS Calculator - OSRS Wiki
+See how your gear stacks up against Old School RuneScape's monsters using the OSRS Wiki's damage-per-second calculator.
+Image
+(https://www.osrsleaguescountdown.io/tree?share=1y7kYD2MHE9IxDEYAAIABAAA&name=.!%20Air%20Prayer%2040p) 
+.! Air Prayer 40p (40/40 pts) - Demonic Pacts Build
+.! Air Prayer 40p — a 40/40 point Demonic Pacts build for OSRS Leagues 6. Click to view, edit, or fork this build.
+.! Air Prayer 40p (40/40 pts) - Demonic Pacts Build

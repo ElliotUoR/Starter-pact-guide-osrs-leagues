@@ -1,0 +1,1 @@
+apple (10,180), banana (14,732), orange (20,693.6), curry (24,295.2), pineapple (38,333.6), papaya (51,043.2), palm (84,076.8), dragonfruit (143,160)

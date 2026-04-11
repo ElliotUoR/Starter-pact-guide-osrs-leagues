@@ -1,0 +1,408 @@
+=============================================================
+  OSRS LEAGUES 6 - DEMONIC PACTS BUILD GUIDE
+  Regions: Kandarin, Kourend, Prifddinas
+=============================================================
+
+NOTE: This guide only covers assumed progress, not relic picks.
+      Low point tasks are critical - unlock all regions as fast as possible.
+
+
+-------------------------------------------------------------
+  STRATEGY OVERVIEW
+-------------------------------------------------------------
+
+Core idea: Kandarin echo weapons + prayer gear create a synergy where you
+will always max hit via elemental weakness. Aim for 50 prayer bonus.
+
+Problem: Mage accuracy falls flat against Vardorvis, Sol, etc.
+Solution: Air setup is cheap; hybrid with melee where magic underperforms.
+
+Why melee: Melee is the best counterpart to magic, performing where mage
+doesn't - e.g. Tekton, Sol, Vard.
+Exception: Olm head still wants ranged (rune cbow, tbow, dhunter cbow).
+
+Example final loadout:
+https://tools.runescape.wiki/osrs-dps-staging?id=WeepingYeastKrandorian
+Take all accuracy nodes, dip into melee speed attacks.
+
+
+-------------------------------------------------------------
+  STAGE 1: GETTING STARTED  (Pacts 1-5)
+-------------------------------------------------------------
+
+[ ] Complete the Leagues Tutorial (10 points)
+[ ] Open the Leagues Menu (10 points)
+[ ] Defeat a Hill Giant (10 points)
+[ ] Reach Combat Level 50 (30 points)
+[ ] Use the Protect from Melee Prayer (30 points)
+
+Build at 5 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAIAAAAAAAAAAAAA&name=..%20v%20start%20cbow%205p)
+
+By this point you will likely have 91 Hunter and 74 Fletching
+(transmute EH logs, or rumour sack logs for quick xp).
+
+
+  -- Prayer --
+
+Get 43 Prayer (6293 maingame xp) from sunkissed bones (28)
+(OR transmute to superior and bury 42 regular bones - can be gathered from hunter)
+If tier 3+, only need: 19 sunkissed + 28 regular bones - might as well get ranged & magic prayer too.
+
+
+  -- Farming Setup --
+
+VERY IMPORTANT: Plant seeds gathered from hunter to get 65 Farming ASAP.
+
+Varlamore farming patches (need 449k xp, 391k via teak):
+  1 tree patch      - Oak (3.85k/32min), Willow (11.8k/48min), Maple (27.2k/64min), Yew (57.2k/80min)
+  1 fruit tree patch - 3.2hr cycle: Apple (10,180), Banana (14,732), Orange (20,693), Curry (24,295), Pineapple (38,333), Papaya (51,043)
+  1 hardwood patch  - 15hr cycle, get Teak planted day 1 for 58,320 xp
+  1 allotment/herb/flower patch
+
+Track these with notifications! Always use supercompost.
+
+Sapling quantities to bring (including spares):
+  Normal Trees:
+    Oak saplings      x3 (+1)  -- 27% chance at least one of 3 dies
+    Willow saplings   x4 (+1)  -- 34% chance at least one of 4 dies
+    Maple saplings    x6 (+2)  -- 47% chance at least one of 6 dies; nearly a coin flip, bring spares
+    Yew saplings      x2 (+1)  -- 19% chance; low odds but yew takes 80 min so losing one hurts
+
+  Fruit Trees:
+    Apple sapling     x1 (+1)  -- 10% chance; a failed run costs 3h 12m
+    Curry sapling     x1 (+1)  -- 10% chance; same logic
+    Pineapple sapling x1 (+1)  -- 10% chance; same logic
+    Papaya sapling    x1 (+1)  -- 10% chance; this is your final critical run, always bring a spare
+
+
+-------------------------------------------------------------
+  STAGE 2: HUEY & KARAMJA  (Pacts 6-10)
+-------------------------------------------------------------
+
+  -- Training Ranged for the Sunlight Hunter Bow --
+
+You want 65 Ranged to wield the Sunlight Hunter Bow. Do this AFTER completing Hunter:
+  - Train Ranged to 45 (7,700 maingame xp)
+  - Unlock Kandarin or Kourend, catch grey chins
+  - Train to 55 at Harpie Bug Swarms using grey chins
+  - Train to 65 at Harpie Bug Swarms using red chins
+
+
+  -- Gear Preparation --
+
+Range gear (recommended):
+  - 63 Crafting via shopping or gem mining (Karamja) + transmute to highest cuttable
+  - Do the Death on the Isle quest
+  - 43-55 Crafting: diamonds (8x rate = 136 gems, 12x rate = 91 gems)
+  - 55-63 Crafting: dragonstones (8x = 184, 12x = 123)
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Green Dragonhide Set  (body, vbrace, legs, shield)
+  Snakeskin Boots
+  Coif
+  How: Transmute for green dhide/snakeskin, then craft at 63 Crafting
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Optional:
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Power Amulet
+  How: 70 Crafting (63-70 dragonstones: 8x = 336 gems, 12x = 224)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Note: this is only ~1.3 DPS at Huey with prayer up
+
+Magic gear (alternative - 3.5 DPS with prayers):
+  - 70 Magic for Earth Wave
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Earth Staff
+  How: Buy from Auburnvale shop
+  Full Mystic Set  (if Kandarin unlocked)
+  Power Amulet    (same method as above)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Note: for mage Huey kill you will want ~8 hours of transmutes
+
+[ ] 1 Hueycoatl Kill (80 Points)
+
+
+  -- Karamja Tasks --
+
+Assuming Kandarin is unlocked first (and therefore Karamja access):
+
+[ ] Defeat a Steel Dragon on Karamja (30 Points)
+[ ] Defeat a TzHaar (30 Points)
+[ ] Defeat a Demonic Gorilla (80 Points)  -- can be done before Huey
+[ ] Defeat a Mithril Dragon (80 Points)   -- can also be done before Huey; pray melee, bring good food (hits 18s)
+
+You will now have 10 pacts.
+
+Build at 10 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAAACQAEAA&name=..%20v%20start%20cbow%2010p)
+Note: 8p here for the 70% node isn't great (sometimes a tiny DPS loss) but it's the best path to good keystones.
+
+
+-------------------------------------------------------------
+  STAGE 3: KOUREND  (Pacts 11-12)
+-------------------------------------------------------------
+
+At this point you need Kourend and Prifddinas to realistically progress.
+Assuming Kourend second:
+
+[ ] Open 1 Grubby Chest (10 Points)
+
+Assign max hit keystone.
+
+[ ] 150 Lizardmen Shaman Kills (30 Points)
+
+For Shayzien armour, do some EH barb fishing until ~40 Strength,
+which should be enough to prayer flick through.
+150 kills is ~15 seconds each = 40 mins minimum. Delay if slayer is not urgent.
+
+From here onwards:
+  - Plant a Hespori seed ASAP - it takes ~6.4 hrs to grow
+  - Note: magic W water tree is worse here even with more points
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Power Amulet  +  Blue Dragonhide Set
+  How: Train to 71 Crafting
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+-------------------------------------------------------------
+  STAGE 4: ECHO BOSSES & FIRE CAPE  (Pacts 13-16)
+-------------------------------------------------------------
+
+These 12 points are the easiest relative to alternatives. You could do fire cape
+first, but getting max hit first saves more time overall.
+
+[ ] Kill 1 unique Echo Boss (80 points + Reset)
+[ ] Kill 2 unique Echo Bosses (80 points + Reset)
+
+Echo boss strategy:
+  - Kill Echo Amoxliatl: normal Amox is ~123 seconds at 75 Ranged with blue dhide
+  - Kill Echo Hespori: bring chins, food and prayers - much easier with a mage build on 3t staff
+  - Thermonuclear Smoke Devil is doable but requires 90+ Slayer (unlikely at this stage)
+  - Killing one makes the other easier as you unlock max hit
+
+Once strong enough from max hit unlock:
+
+[ ] Equip a Fire Cape (200 Points)
+[ ] Complete Tzhaar-Ket-Rek's third challenge (80 Points)
+
+Build at 16 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAACGQAMAs&name=..%20v%20start%20cbow%2016p)
+
+You should have your t6 relic and 3rd region unlock around the same time,
+though likely the 6th relic comes first.
+
+
+-------------------------------------------------------------
+  STAGE 5: PRIFDDINAS  (Pacts 17-18)
+-------------------------------------------------------------
+
+Respec when done with slayer into magic. Upon unlocking Priff:
+
+[ ] Kill a Black Dragon in Tirannwn (30 Points)
+[ ] Complete the Corrupted Gauntlet (80 Points)
+
+Things to prepare/consider:
+  - Spam Ranarrs + Snapegrass for prayer sustain
+  - Transmute + cook raw fish to best HP food
+  - You will need 70 Smithing for Zalcano - consider ore transmute, or iron with 12x xp (61.5k maingame xp needed)
+  - You will need 89 Crafting for Zenyte - requires 70 Smithing and Crafting when training in Priff
+  - Scrambled Eggs quest gives 5k Smithing xp
+
+
+-------------------------------------------------------------
+  STAGE 6: SLAYER & EQUIPMENT PUSH  (Pacts 19-25)
+-------------------------------------------------------------
+
+Slayer tasks + Zalcano should bring you to roughly 25-26 pacts.
+
+[ ] Defeat Zalcano (80 Points)
+[ ] Equip a Dark Bow in Tirannwn (80 Points)
+[ ] 1 Skotizo Kill (80 Points)
+[ ] Defeat the Kraken Boss 50 Times (80 Points)
+[ ] Equip a Trident of the Seas (80 Points)
+[ ] Equip an Abyssal Tentacle (200 Points)
+[ ] Equip an Occult Necklace (200 Points)
+
+Build at 26 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1BQDAAgAAAMCAAQAGLG8AMA8&name=..%20v%20start%20cbow%2026p)
+
+Notes:
+  - If only at 25p, drop echo throw
+  - GET 95 SLAYER FOR HYDRAS
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Antler Guard  (offhand - massive upgrade)
+  How: Farm from Slayer tasks
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+-------------------------------------------------------------
+  STAGE 7: ECHO THERMY  (Pact 26)
+-------------------------------------------------------------
+
+Respec to kill Echo Thermonuclear Smoke Devil on task.
+
+Kill Echo Thermy setup:
+https://dps.osrs.wiki/?id=SpinachCoconutEssence
+(https://www.osrsleaguescountdown.io/tree?share=1yxgAD2MDANARBAIAAIAAAAA&name=.!%20Air%20Prayer%2025p)
+Don't forget prayers!
+
+[ ] Kill 3 unique Echo Bosses (80 points + Reset)
+
+After Echo Thermy you will have 26 pacts.
+
+
+-------------------------------------------------------------
+  STAGE 8: FINAL EQUIPMENT PUSH  (Pacts 27-31)
+-------------------------------------------------------------
+
+To unlock melee you need 32 pacts. Do the following tasks:
+
+[ ] Craft a Toxic Blowpipe (200 Points)
+[ ] Use a prayer altar to restore 90 prayer in Prifddinas (200 Points)
+
+Do Echo Hunlleff (take trident node):
+[ ] Equip a Corrupted Weapon (400 Points)
+[ ] Kill 4 unique Echo Bosses (200 points)
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Zenyte Jewelry  (partial hybrid melee build is good enough)
+  How: Get an armour seed from Echo Hunlleff, then thieve until 99 Crafting/Smithing
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[ ] Equip Some Zenyte Jewelry (200 Points)  -- partial hybrid melee build is good enough
+
+Build at 31 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1y5gID2MDEdIRBEIAAIAAAAA&name=.!%20Air%20Prayer%2031p)
+
+
+-------------------------------------------------------------
+  STAGE 9: END GAME  (Pacts 32-40)
+-------------------------------------------------------------
+
+  -- Fortis Colosseum --
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Sol Loadout  (melee gear for Colosseum)
+  How: Farm Perilous Moons - https://dps.osrs.wiki/?id=SanguineGourdCake
+  Note: Train melee skills at this point (~18x xp so not too bad)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[ ] Complete Wave 12 of Fortis Colosseum (200 Points)
+
+Take accuracy node after this kill.
+We need 4 more pacts for water spell healing (reaching 36 pacts).
+Upgrades really count now - spam clues and get 2 zenytes.
+https://dps.osrs.wiki/?id=BlacksmithsSilverBetrayal
+
+
+  -- Chambers of Xeric  (T8 relic recommended - take water upgrades) --
+
+[ ] 25 Chambers of Xeric Completions (80 Points)  -- do normals until Augury; Preserve is also a great upgrade
+[ ] Equip any Ancestral Piece (200 Points)
+[ ] Equip a Dragon Hunter Lance (200 Points)
+[ ] Equip Avernic Treads (200 Points)  -- 100% stay for Conflicts
+
+Build at 36 pacts:
+(https://www.osrsleaguescountdown.io/tree?share=1y5kID2MDE9IRDEYAAIABAAA&name=.!%20Air%20Prayer%2036p)
+
+
+  -- Inferno & Final Bosses --
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Ancestral Top or Bottom
+  How: Do CoX until you get an Ancestral top or bottom
+  Melee setup ref: https://dps.osrs.wiki/?id=GarmentsDressingPulley
+  Mage setup ref:  https://dps.osrs.wiki/?id=SteamPineFenkenstrain
+  Also: farm Sol for prayer, kill Echo Hunlleff
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This gear is enough for Awakened Vardorvis. Take water healing before inferno.
+
+[ ] Defeat Awakened Vardorvis (200 Points)
+
+Do inferno, take another minor accuracy node.
+[ ] Equip an Infernal Cape (400 Points)
+[ ] Complete Tzhaar-Ket-Rek's Special challenge (400 Points)  -- pre-pot if possible with water healing
+Take final minor accuracy node when done.
+
+[ ] Equip a piece of Radiant Oathplate (200 Points)  -- farm the contracts; may not be as hard as it seems
+
+Take +1% magic damage node to finish.
+
+  ~~~ GEAR UPGRADE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Devout Boots
+  Ancestral Body
+  Ardougne Cloak 4  (if not already obtained)
+  How: Farm/complete as final build polish - build is done!
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Final build:
+https://dps.osrs.wiki/?id=VolumeMailImcandorias
+(https://www.osrsleaguescountdown.io/tree?share=1y7kYD2MHE9IxDEYAAIABAAA&name=.!%20Air%20Prayer%2040p)
+
+=============================================================
+  PACT CHECKLIST SUMMARY  (40 total)
+=============================================================
+
+Stage 1 - Getting Started:
+  [ ] Complete the Leagues Tutorial (10 points)
+  [ ] Open the Leagues Menu (10 points)
+  [ ] Defeat a Hill Giant (10 points)
+  [ ] Reach Combat Level 50 (30 points)
+  [ ] Use the Protect from Melee Prayer (30 points)
+
+Stage 2 - Huey & Karamja:
+  [ ] 1 Hueycoatl Kill (80 Points)
+  [ ] Defeat a Steel Dragon on Karamja (30 Points)
+  [ ] Defeat a TzHaar (30 Points)
+  [ ] Defeat a Demonic Gorilla (80 Points)
+  [ ] Defeat a Mithril Dragon (80 Points)
+
+Stage 3 - Kourend:
+  [ ] Open 1 Grubby Chest (10 Points)
+  [ ] 150 Lizardmen Shaman Kills (30 Points)
+
+Stage 4 - Echo Bosses & Fire Cape:
+  [ ] Kill 1 unique Echo Boss (80 points + Reset)
+  [ ] Kill 2 unique Echo Bosses (80 points + Reset)
+  [ ] Equip a Fire Cape (200 Points)
+  [ ] Complete Tzhaar-Ket-Rek's third challenge (80 Points)
+
+Stage 5 - Prifddinas:
+  [ ] Kill a Black Dragon in Tirannwn (30 Points)
+  [ ] Complete the Corrupted Gauntlet (80 Points)
+
+Stage 6 - Slayer & Equipment:
+  [ ] Defeat Zalcano (80 Points)
+  [ ] Equip a Dark Bow in Tirannwn (80 Points)
+  [ ] 1 Skotizo Kill (80 Points)
+  [ ] Defeat the Kraken Boss 50 Times (80 Points)
+  [ ] Equip a Trident of the Seas (80 Points)
+  [ ] Equip an Abyssal Tentacle (200 Points)
+  [ ] Equip an Occult Necklace (200 Points)
+
+Stage 7 - Echo Thermy:
+  [ ] Kill 3 unique Echo Bosses (80 points + Reset)
+
+Stage 8 - Final Equipment Push:
+  [ ] Craft a Toxic Blowpipe (200 Points)
+  [ ] Use a prayer altar to restore 90 prayer in Prifddinas (200 Points)
+  [ ] Equip a Corrupted Weapon (400 Points)
+  [ ] Kill 4 unique Echo Bosses (200 points)
+  [ ] Equip Some Zenyte Jewelry (200 Points)
+
+Stage 9 - End Game:
+  [ ] Complete Wave 12 of Fortis Colosseum (200 Points)
+  [ ] 25 Chambers of Xeric Completions (80 Points)
+  [ ] Equip any Ancestral Piece (200 Points)
+  [ ] Equip a Dragon Hunter Lance (200 Points)
+  [ ] Equip Avernic Treads (200 Points)
+  [ ] Defeat Awakened Vardorvis (200 Points)
+  [ ] Equip an Infernal Cape (400 Points)
+  [ ] Complete Tzhaar-Ket-Rek's Special challenge (400 Points)
+  [ ] Equip a piece of Radiant Oathplate (200 Points)
