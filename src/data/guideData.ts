@@ -1,4 +1,4 @@
-export type StepType = 'pact' | 'step' | 'info' | 'warning' | 'relic' | 'keystone';
+export type StepType = 'pact' | 'step' | 'info' | 'warning' | 'relic' | 'keystone' | 'assignment';
 
 export interface StepLink {
   /** The substring of `text` to turn into a hyperlink */
@@ -18,8 +18,12 @@ export interface Step {
   links?: StepLink[];
   /** If set, clicking the item opens a named modal overlay instead of toggling */
   modal?: string;
-  /** Filename from /images/pacts/ to display alongside keystone steps */
+  /** Region/category this pact belongs to */
+  region?: 'Global' | 'Varlamore' | 'Karamja' | 'Kandarin' | 'Kourend' | 'Tirannwn';
+  /** Filename from /images/pacts/ to display alongside keystone/assignment steps */
   pactImage?: string;
+  /** Rank for assignment-type steps */
+  assignmentRank?: 'Major' | 'Minor';
 }
 
 export interface GearItem {
@@ -97,8 +101,10 @@ export const stages: Stage[] = [
     intro:
       'Complete the early tutorial tasks to unlock the Leagues system. Low point tasks are critical — unlock all three regions as fast as possible.',
     steps: [
-      { id: 's1-p1', text: 'Complete the Leagues Tutorial', type: 'pact', points: 10 },
-      { id: 's1-p2', text: 'Open the Leagues Menu', type: 'pact', points: 10 },
+      { id: 's1-p1', text: 'Complete the Leagues Tutorial', type: 'pact', points: 10, region: 'Global' },
+      { id: 's1-a1', text: 'Assign Resource Node', type: 'assignment', assignmentRank: 'Major', pactImage: 'Resources_Pact.png' },
+      { id: 's1-p2', text: 'Open the Leagues Menu', type: 'pact', points: 10, region: 'Global' },
+      { id: 's1-a2', text: 'Assign Ranged Echo Node', type: 'assignment', assignmentRank: 'Major', pactImage: 'Ranged_Echo_Pact.png' },
       {
         id: 's1-r1',
         text: 'Unlock first relic — Endless Harvest recommended',
@@ -110,6 +116,7 @@ export const stages: Stage[] = [
         text: 'Defeat a Hill Giant',
         type: 'pact',
         points: 10,
+        region: 'Global',
         links: [{ text: 'Hill Giant', url: 'https://oldschool.runescape.wiki/w/Hill_Giant' }],
       },
       {
@@ -239,7 +246,7 @@ export const stages: Stage[] = [
           { text: 'Libation bowl', url: 'https://oldschool.runescape.wiki/w/Libation_bowl' },
         ],
       },
-      { id: 's1-p5', text: 'Use the Protect from Melee Prayer', type: 'pact', points: 30 },
+      { id: 's1-p5', text: 'Use the Protect from Melee Prayer', type: 'pact', points: 30, region: 'Global' },
       {
         id: 's1-seeds',
         text: 'Setup seeds and saplings for farming, use transmute to obtain desired amount of seeds (and supercompost) below',
@@ -336,7 +343,7 @@ export const stages: Stage[] = [
       },
       { id: 's2-3', text: "Train Ranged to 55 at Harpie Bug Swarms/another region's multi combat monsters using grey chins", type: 'step' },
       { id: 's2-4', text: "Train Ranged to 65 at Harpie Bug Swarms/another region's multi combat monsters using red chins", type: 'step' },
-      { id: 's2-p6', text: 'Reach Combat Level 50', type: 'pact', points: 30 },
+      { id: 's2-p6', text: 'Reach Combat Level 50', type: 'pact', points: 30, region: 'Global' },
       { id: 's2-cmb', text: '50 Combat = 65 Ranged + 50 Hitpoints + 46 Prayer', type: 'info' },
       {
         id: 's2-shcb',
@@ -400,7 +407,7 @@ export const stages: Stage[] = [
         type: 'step',
       },
       { id: 's2-10info', text: '63–70 via dragonstones: 8x = 336 gems, 12x = 224 gems', type: 'info' },
-      { id: 's2-p1', text: '1 Hueycoatl Kill', type: 'pact', points: 80 },
+      { id: 's2-p1', text: '1 Hueycoatl Kill', type: 'pact', points: 80, region: 'Varlamore' },
       {
         id: 's2-11',
         text: 'Mage route (3.5 DPS): 70 Magic for Earth Wave, buy Earth Staff from Auburnvale, get Full Mystic if Kandarin is unlocked. Needs ~8hrs of transmutes.',
@@ -416,14 +423,14 @@ export const stages: Stage[] = [
         text: 'Try worlds with high population — Huey can be massed so more people the better',
         type: 'info',
       },
-      { id: 's2-p2', text: 'Defeat a Steel Dragon on Karamja', type: 'pact', points: 30 },
+      { id: 's2-p2', text: 'Defeat a Steel Dragon on Karamja', type: 'pact', points: 30, region: 'Karamja' },
       {
         id: 's2-p2info',
         text: 'You can get an anti-dragon shield from any slayer master in leagues',
         type: 'info',
         links: [{ text: 'any slayer master', url: 'https://oldschool.runescape.wiki/w/Slayer_Equipment_(shop)' }],
       },
-      { id: 's2-p3', text: 'Defeat a TzHaar', type: 'pact', points: 30 },
+      { id: 's2-p3', text: 'Defeat a TzHaar', type: 'pact', points: 30, region: 'Karamja' },
       { id: 's2-p3info', text: 'Can safespot or just pray against style', type: 'info' },
     ],
     gearUpgrades: [
@@ -484,12 +491,14 @@ export const stages: Stage[] = [
         text: 'Defeat a Demonic Gorilla',
         type: 'pact',
         points: 80,
+        region: 'Kandarin',
       },
       {
         id: 's3k-p2',
         text: 'Defeat a Mithril Dragon — pray melee, bring good food (hits 18s). Can be done before Huey.',
         type: 'pact',
         points: 80,
+        region: 'Kandarin',
       },
     ],
     gearUpgrades: [],
@@ -514,7 +523,7 @@ export const stages: Stage[] = [
         type: 'relic',
         relics: ['Larcenist.png'],
       },
-      { id: 's3-p1', text: 'Open 1 Grubby Chest', type: 'pact', points: 10 },
+      { id: 's3-p1', text: 'Open 1 Grubby Chest', type: 'pact', points: 10, region: 'Kourend' },
       {
         id: 's3-p1info',
         text: 'Grubby Chest requires 57 Thieving',
@@ -522,7 +531,7 @@ export const stages: Stage[] = [
         links: [{ text: 'Grubby Chest', url: 'https://oldschool.runescape.wiki/w/Grubby_chest' }],
       },
       { id: 's3-1', text: 'Assign the Max Hit keystone', type: 'keystone', pactImage: 'CBow_MaxHit_Pact.png' },
-      { id: 's3-p2', text: '150 Lizardmen Shaman Kills', type: 'pact', points: 30 },
+      { id: 's3-p2', text: '150 Lizardmen Shaman Kills', type: 'pact', points: 30, region: 'Kourend' },
       {
         id: 's3-2',
         text: 'For Shayzien armour: EH barb fish until ~40 Strength — enough to prayer flick through. ~40 min at 15 sec per kill.',
@@ -556,7 +565,7 @@ export const stages: Stage[] = [
     intro:
       'These 4 pacts are the easiest at this stage. Getting max hit first saves more time than rushing the Fire Cape early. Kill two Echo Bosses to unlock max hit, then clear the TzHaar content.',
     steps: [
-      { id: 's4-p1', text: 'Kill 1 unique Echo Boss', type: 'pact', points: 80, isReset: true },
+      { id: 's4-p1', text: 'Kill 1 unique Echo Boss', type: 'pact', points: 80, isReset: true, region: 'Global' },
       {
         id: 's4-1',
         text: 'Echo Amoxliatl: normal Amox is ~123 sec at 75 Ranged with blue dhide — boss looks relatively simple',
@@ -572,14 +581,14 @@ export const stages: Stage[] = [
         text: 'Echo Thermonuclear Smoke Devil: doable but requires 90+ Slayer — unlikely at this stage',
         type: 'info',
       },
-      { id: 's4-p2', text: 'Kill 2 unique Echo Bosses', type: 'pact', points: 80, isReset: true },
+      { id: 's4-p2', text: 'Kill 2 unique Echo Bosses', type: 'pact', points: 80, isReset: true, region: 'Global' },
       {
         id: 's4-4',
         text: 'Killing one Echo Boss makes the next easier — max hit unlocks after the second kill',
         type: 'info',
       },
-      { id: 's4-p3', text: 'Equip a Fire Cape', type: 'pact', points: 200 },
-      { id: 's4-p4', text: "Complete Tzhaar-Ket-Rek's third challenge", type: 'pact', points: 80 },
+      { id: 's4-p3', text: 'Equip a Fire Cape', type: 'pact', points: 200, region: 'Karamja' },
+      { id: 's4-p4', text: "Complete Tzhaar-Ket-Rek's third challenge", type: 'pact', points: 80, region: 'Karamja' },
     ],
     gearUpgrades: [],
     buildLink:
@@ -596,8 +605,8 @@ export const stages: Stage[] = [
       'Unlock Prifddinas as your third region. You should have your t6 relic and third region around the same time — likely the relic first. Respec into magic once Slayer is done.',
     steps: [
       { id: 's5-1', text: 'Respec into magic once Slayer grind is done', type: 'step' },
-      { id: 's5-p1', text: 'Kill a Black Dragon in Tirannwn', type: 'pact', points: 30 },
-      { id: 's5-p2', text: 'Complete the Corrupted Gauntlet', type: 'pact', points: 80 },
+      { id: 's5-p1', text: 'Kill a Black Dragon in Tirannwn', type: 'pact', points: 30, region: 'Tirannwn' },
+      { id: 's5-p2', text: 'Complete the Corrupted Gauntlet', type: 'pact', points: 80, region: 'Tirannwn' },
       { id: 's5-2', text: 'Stock up on Ranarrs + Snapegrass for prayer sustain going forward', type: 'step' },
       { id: 's5-3', text: 'Transmute + cook raw fish for best HP food', type: 'step' },
       {
@@ -629,13 +638,13 @@ export const stages: Stage[] = [
         text: 'Farm Antler Guard from Slayer tasks — massive offhand upgrade, do not skip',
         type: 'step',
       },
-      { id: 's6-p1', text: 'Defeat Zalcano', type: 'pact', points: 80 },
-      { id: 's6-p2', text: 'Equip a Dark Bow in Tirannwn', type: 'pact', points: 80 },
-      { id: 's6-p3', text: '1 Skotizo Kill', type: 'pact', points: 80 },
-      { id: 's6-p4', text: 'Defeat the Kraken Boss 50 Times', type: 'pact', points: 80 },
-      { id: 's6-p5', text: 'Equip a Trident of the Seas', type: 'pact', points: 80 },
-      { id: 's6-p6', text: 'Equip an Abyssal Tentacle', type: 'pact', points: 200 },
-      { id: 's6-p7', text: 'Equip an Occult Necklace', type: 'pact', points: 200 },
+      { id: 's6-p1', text: 'Defeat Zalcano', type: 'pact', points: 80, region: 'Tirannwn' },
+      { id: 's6-p2', text: 'Equip a Dark Bow in Tirannwn', type: 'pact', points: 80, region: 'Tirannwn' },
+      { id: 's6-p3', text: '1 Skotizo Kill', type: 'pact', points: 80, region: 'Kourend' },
+      { id: 's6-p4', text: 'Defeat the Kraken Boss 50 Times', type: 'pact', points: 80, region: 'Kandarin' },
+      { id: 's6-p5', text: 'Equip a Trident of the Seas', type: 'pact', points: 80, region: 'Kandarin' },
+      { id: 's6-p6', text: 'Equip an Abyssal Tentacle', type: 'pact', points: 200, region: 'Kandarin' },
+      { id: 's6-p7', text: 'Equip an Occult Necklace', type: 'pact', points: 200, region: 'Kandarin' },
       {
         id: 's6-3',
         text: 'If you end up at only 25 pacts, drop echo throw from the build',
@@ -665,7 +674,7 @@ export const stages: Stage[] = [
     steps: [
       { id: 's7-1', text: 'Respec the build for Echo Thermonuclear Smoke Devil', type: 'step' },
       { id: 's7-2', text: 'Kill Echo Thermy on Slayer task — do not forget prayers!', type: 'step' },
-      { id: 's7-p1', text: 'Kill 3 unique Echo Bosses', type: 'pact', points: 80, isReset: true },
+      { id: 's7-p1', text: 'Kill 3 unique Echo Bosses', type: 'pact', points: 80, isReset: true, region: 'Global' },
     ],
     gearUpgrades: [],
     buildLink:
@@ -684,21 +693,23 @@ export const stages: Stage[] = [
     intro:
       'Push to 32 pacts to unlock the melee tree. Echo Hunlleff is the key source of upgrade materials — get the armour seed and thieve to 99 Crafting/Smithing for Zenyte.',
     steps: [
-      { id: 's8-p1', text: 'Craft a Toxic Blowpipe', type: 'pact', points: 200 },
+      { id: 's8-p1', text: 'Craft a Toxic Blowpipe', type: 'pact', points: 200, region: 'Tirannwn' },
       {
         id: 's8-p2',
         text: 'Use a prayer altar to restore 90 prayer in Prifddinas',
         type: 'pact',
         points: 200,
+        region: 'Tirannwn',
       },
       { id: 's8-1', text: 'Do Echo Hunlleff — take the trident node', type: 'step' },
-      { id: 's8-p3', text: 'Equip a Corrupted Weapon', type: 'pact', points: 400 },
+      { id: 's8-p3', text: 'Equip a Corrupted Weapon', type: 'pact', points: 400, region: 'Tirannwn' },
       {
         id: 's8-p4',
         text: 'Kill 4 unique Echo Bosses',
         type: 'pact',
         points: 200,
         isReset: true,
+        region: 'Global',
       },
       { id: 's8-2', text: 'Get an armour seed from Echo Hunlleff if possible', type: 'step' },
       { id: 's8-3', text: 'Thieve until 99 Crafting and Smithing', type: 'step' },
@@ -707,6 +718,7 @@ export const stages: Stage[] = [
         text: 'Equip Some Zenyte Jewelry',
         type: 'pact',
         points: 200,
+        region: 'Kandarin',
       },
     ],
     gearUpgrades: [
@@ -732,7 +744,7 @@ export const stages: Stage[] = [
     steps: [
       { id: 's9-1', text: 'Train melee skills — roughly 18x xp rate so not too bad', type: 'step' },
       { id: 's9-2', text: 'Farm Perilous Moons for the Sol melee loadout', type: 'step' },
-      { id: 's9-p1', text: 'Complete Wave 12 of Fortis Colosseum', type: 'pact', points: 200 },
+      { id: 's9-p1', text: 'Complete Wave 12 of Fortis Colosseum', type: 'pact', points: 200, region: 'Varlamore' },
       { id: 's9-3', text: 'Take an accuracy node after Colosseum', type: 'step' },
       {
         id: 's9-4',
@@ -749,30 +761,33 @@ export const stages: Stage[] = [
         text: '25 Chambers of Xeric Completions',
         type: 'pact',
         points: 80,
+        region: 'Kourend',
       },
       {
         id: 's9-6',
         text: 'Do normals until Augury drops — Preserve is also a great upgrade',
         type: 'info',
       },
-      { id: 's9-p3', text: 'Equip any Ancestral Piece', type: 'pact', points: 200 },
-      { id: 's9-p4', text: 'Equip a Dragon Hunter Lance', type: 'pact', points: 200 },
+      { id: 's9-p3', text: 'Equip any Ancestral Piece', type: 'pact', points: 200, region: 'Kourend' },
+      { id: 's9-p4', text: 'Equip a Dragon Hunter Lance', type: 'pact', points: 200, region: 'Kourend' },
       {
         id: 's9-p5',
         text: 'Equip Avernic Treads — 100% stay for Conflicts',
         type: 'pact',
         points: 200,
+        region: 'Varlamore',
       },
       { id: 's9-7', text: 'Do CoX until Ancestral top or bottom drops', type: 'step' },
       { id: 's9-8', text: 'Farm Sol for prayer + kill Echo Hunlleff', type: 'step' },
-      { id: 's9-p6', text: 'Defeat Awakened Vardorvis', type: 'pact', points: 200 },
+      { id: 's9-p6', text: 'Defeat Awakened Vardorvis', type: 'pact', points: 200, region: 'Varlamore' },
       { id: 's9-9', text: 'Do Inferno — take another minor accuracy node', type: 'step' },
-      { id: 's9-p7', text: 'Equip an Infernal Cape', type: 'pact', points: 400 },
+      { id: 's9-p7', text: 'Equip an Infernal Cape', type: 'pact', points: 400, region: 'Karamja' },
       {
         id: 's9-p8',
         text: "Complete Tzhaar-Ket-Rek's Special challenge — pre-pot if possible with water healing",
         type: 'pact',
         points: 400,
+        region: 'Karamja',
       },
       { id: 's9-10', text: 'Take final minor accuracy node', type: 'step' },
       {
@@ -780,6 +795,7 @@ export const stages: Stage[] = [
         text: 'Equip a piece of Radiant Oathplate — farm the contracts; may not be as hard as it seems',
         type: 'pact',
         points: 200,
+        region: 'Varlamore',
       },
       { id: 's9-11', text: 'Take +1% magic damage node to finish the tree', type: 'step' },
       { id: 's9-12', text: 'Farm Devout Boots', type: 'step' },

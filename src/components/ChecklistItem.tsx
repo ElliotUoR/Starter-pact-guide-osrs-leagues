@@ -95,21 +95,46 @@ const typeStyles = {
     checkFill: 'bg-red-700',
     text: 'text-red-200 font-semibold',
   },
+  assignment: {
+    border: 'border-orange-700/50 bg-orange-950/50 hover:border-orange-600/60',
+    badge: 'bg-orange-900/40 text-orange-300 border border-orange-700/40',
+    checkBorder: 'border-orange-500',
+    checkFill: 'bg-orange-700',
+    text: 'text-orange-200 font-semibold',
+  },
 };
 
 const BADGE_LABELS: Partial<Record<string, string>> = {
   pact: 'Pact',
   warning: 'Important',
   keystone: 'Keystone',
+  // assignment badge is dynamic (Major/Minor) — handled separately
 };
 
-function StepBadge({ type, badge }: { readonly type: string; readonly badge: string }) {
-  const label = BADGE_LABELS[type];
-  if (!label) return null;
+const REGION_STYLES: Record<string, string> = {
+  Global:    'bg-slate-800/60 text-slate-300 border-slate-600/40',
+  Varlamore: 'bg-amber-900/40 text-amber-300 border-amber-600/40',
+  Karamja:   'bg-orange-900/40 text-orange-300 border-orange-600/40',
+  Kandarin:  'bg-cyan-900/40 text-cyan-300 border-cyan-600/40',
+  Kourend:   'bg-purple-900/40 text-purple-300 border-purple-600/40',
+  Tirannwn:  'bg-emerald-900/40 text-emerald-300 border-emerald-600/40',
+};
+
+function StepBadge({ type, badge, region, assignmentRank }: { readonly type: string; readonly badge: string; readonly region?: string; readonly assignmentRank?: string }) {
+  const label = type === 'assignment' ? assignmentRank : BADGE_LABELS[type];
   return (
-    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide ${badge}`}>
-      {label}
-    </span>
+    <>
+      {label && (
+        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide ${badge}`}>
+          {label}
+        </span>
+      )}
+      {region && (
+        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide border ${REGION_STYLES[region] ?? ''}`}>
+          {region}
+        </span>
+      )}
+    </>
   );
 }
 
@@ -208,6 +233,7 @@ export default function ChecklistItem({ step, checked, onToggle, compact = false
   const styles = typeStyles[step.type];
   const isCheckable = step.type !== 'info';
   const isKeystone = step.type === 'keystone';
+  const isAssignment = step.type === 'assignment';
   const py = compact ? 'py-1.5' : 'py-2.5';
 
   if (step.modal) return <ModalItem step={step} compact={compact} />;
@@ -223,9 +249,9 @@ export default function ChecklistItem({ step, checked, onToggle, compact = false
       {leading}
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap items-center gap-2">
-          <StepBadge type={step.type} badge={styles.badge} />
+          <StepBadge type={step.type} badge={styles.badge} region={step.region} assignmentRank={step.assignmentRank} />
           <span className={textClass}>{renderTextWithLinks(step.text, step.links)}</span>
-          <StepImages relics={step.relics} pactImage={isKeystone ? step.pactImage : undefined} />
+          <StepImages relics={step.relics} pactImage={isKeystone || isAssignment ? step.pactImage : undefined} />
         </div>
         <PactPoints points={step.points} isReset={step.isReset} />
       </div>
@@ -233,7 +259,7 @@ export default function ChecklistItem({ step, checked, onToggle, compact = false
   );
 
   if (isCheckable) {
-    const alignment = isKeystone ? 'items-center' : 'items-start';
+    const alignment = isKeystone || isAssignment ? 'items-center' : 'items-start';
     return (
       <button
         type="button"
