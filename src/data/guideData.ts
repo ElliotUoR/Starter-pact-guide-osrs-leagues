@@ -49,6 +49,10 @@ export interface Stage {
   gearUpgrades: GearUpgrade[];
   buildLink?: string;
   buildLabel?: string;
+  secondaryBuildLink?: string;
+  secondaryBuildLabel?: string;
+  tertiaryBuildLink?: string;
+  tertiaryBuildLabel?: string;
   dpsLinks?: { label: string; url: string }[];
 }
 
@@ -148,7 +152,7 @@ export const stages: Stage[] = [
       },
       {
         id: 's1-traps',
-        text: 'You can get birdsnares and box traps from Fortis General Store or the Hunter Guild (requires 46 Hunter)',
+        text: 'You can get birdsnares and box traps from Fortis General Store or the Hunter Guild (requires 46 Hunter) - Buy 3 bird snares and 5 box traps',
         type: 'info',
         links: [
           { text: 'Fortis General Store', url: 'https://oldschool.runescape.wiki/w/Fortis_General_Store' },
@@ -294,8 +298,8 @@ export const stages: Stage[] = [
       },
     ],
     buildLink:
-      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAIAAAAAAAAAAAAA&name=..%20v%20start%20cbow%205p',
-    buildLabel: '5p Build',
+      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAAAAAAAAAAAAAAA&name=..%20v%20start%20cbow%204p',
+    buildLabel: '4p Build',
   },
 
   // ─── Stage 2: Huey & Karamja ─────────────────────────────────────────────────
@@ -474,8 +478,8 @@ export const stages: Stage[] = [
       },
     ],
     buildLink:
-      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAAACQAEAA&name=..%20v%20start%20cbow%2010p',
-    buildLabel: '10p Build',
+      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAAAAQAAAA&name=..%20v%20start%20cbow%208p',
+    buildLabel: '8p Build',
   },
 
   // ─── Stage 3: Kandarin ───────────────────────────────────────────────────────
@@ -622,6 +626,9 @@ export const stages: Stage[] = [
       },
     ],
     gearUpgrades: [],
+    buildLink:
+      'https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAACGcAMAs&name=..%20v%20start%20cbow%2018p',
+    buildLabel: '18p Build',
   },
 
   // ─── Stage 7: Slayer & Equipment Push ────────────────────────────────────────
@@ -662,6 +669,11 @@ export const stages: Stage[] = [
     buildLink:
       'https://www.osrsleaguescountdown.io/tree?share=1BQDAAgAAAMCAAQAGLG8AMA8&name=..%20v%20start%20cbow%2026p',
     buildLabel: '26p Build',
+    secondaryBuildLink: 'https://www.osrsleaguescountdown.io/tree?name=..+v+start+cbow+20p',
+    secondaryBuildLabel: '20p Build — only if Priff unlocked',
+    tertiaryBuildLink:
+      'https://www.osrsleaguescountdown.io/tree?share=1BQCABgAAAMABAgAGKEMAIAw&name=..%20v%20start%20cbow%2018p',
+    tertiaryBuildLabel: '18/19p Slayer Respec (requires 2 resets)',
   },
 
   // ─── Stage 8: Echo Thermy ────────────────────────────────────────────────────

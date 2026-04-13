@@ -73,6 +73,18 @@ export default function HunterRumoursModal({ onClose }: Props) {
           </p>
         </div>
 
+        {/* Tip */}
+        <div className="mx-4 mb-1 mt-3 flex gap-2 rounded-md border border-yellow-700/40 bg-yellow-900/20 px-3 py-2">
+          <span className="mt-0.5 flex-shrink-0 text-yellow-400 text-xs">💡</span>
+          <p className="text-xs text-yellow-300/90 leading-snug">
+            It may be faster to train straight to{' '}
+            <span className="font-mono font-bold text-yellow-200">62</span> via black warlocks
+            (catch{' '}
+            <span className="font-mono font-bold text-yellow-200">316</span>) then start doing
+            adept contracts.
+          </p>
+        </div>
+
         {/* 4 boxes — 2×2 grid */}
         <div className="grid grid-cols-2 gap-3 p-4">
           {/* Top-left: Novice */}
@@ -102,6 +114,10 @@ export default function HunterRumoursModal({ onClose }: Props) {
               <li className="text-sm text-osrs-parchment">
                 • At <span className="text-osrs-gold font-mono font-bold">57</span>: use{' '}
                 <span className="text-osrs-parchment font-semibold">Ornus</span> until pyre fox task
+              </li>
+              <li className="text-sm text-osrs-parchment">
+                • Train hunter to{' '}
+                <span className="text-osrs-gold font-mono font-bold">62</span> to catch red chins
               </li>
               <li className="text-sm text-osrs-parchment">
                 • Use <span className="text-osrs-parchment font-semibold">Cervus</span> — always

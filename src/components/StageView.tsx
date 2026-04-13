@@ -127,6 +127,32 @@ export default function StageView({
                   </svg>
                   {stage.buildLabel ?? 'View Build'}
                 </a>
+                {stage.secondaryBuildLink && (
+                  <a
+                    href={stage.secondaryBuildLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[11px] text-osrs-muted hover:text-osrs-parchment border border-osrs-border hover:border-osrs-muted rounded px-2.5 py-1 transition-colors"
+                  >
+                    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M6 1l1.2 3.7H11l-3.1 2.3 1.2 3.7L6 8.5l-3.1 2.2 1.2-3.7L1 4.7h3.8L6 1z" />
+                    </svg>
+                    {stage.secondaryBuildLabel ?? 'Alt Build'}
+                  </a>
+                )}
+                {stage.tertiaryBuildLink && (
+                  <a
+                    href={stage.tertiaryBuildLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[11px] text-osrs-muted hover:text-osrs-parchment border border-osrs-border hover:border-osrs-muted rounded px-2.5 py-1 transition-colors"
+                  >
+                    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M6 1l1.2 3.7H11l-3.1 2.3 1.2 3.7L6 8.5l-3.1 2.2 1.2-3.7L1 4.7h3.8L6 1z" />
+                    </svg>
+                    {stage.tertiaryBuildLabel ?? 'Alt Build'}
+                  </a>
+                )}
                 {stage.dpsLinks?.map((l) => (
                   <a
                     key={l.url}
