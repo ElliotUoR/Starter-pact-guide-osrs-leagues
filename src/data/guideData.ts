@@ -54,6 +54,7 @@ export interface Stage {
   tertiaryBuildLink?: string;
   tertiaryBuildLabel?: string;
   dpsLinks?: { label: string; url: string }[];
+  customBuilds?: { name: string; url: string }[];
 }
 
 export const stages: Stage[] = [
@@ -693,7 +694,7 @@ export const stages: Stage[] = [
       'https://www.osrsleaguescountdown.io/tree?share=1yxgAD2MDANARBAIAAIAAAAA&name=.!%20Air%20Prayer%2025p',
     buildLabel: '25p Build (Echo Thermy)',
     dpsLinks: [
-      { label: 'Echo Thermy DPS Setup', url: 'https://dps.osrs.wiki/?id=SpinachCoconutEssence' },
+      { label: 'Echo Thermy DPS Setup', url: 'https://dps.osrs.wiki?id=UnscentedGlacialisClip' },
     ],
   },
 

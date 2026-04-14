@@ -12,34 +12,53 @@ const MODAL_COMPONENTS: Record<string, React.ComponentType<{ onClose: () => void
   'hunter-46': Hunter46Modal,
 };
 
-function renderTextWithLinks(text: string, links?: StepLink[]): ReactNode {
-  if (!links || links.length === 0) return text;
+interface Segment {
+  index: number;
+  length: number;
+  label: string;
+  url: string;
+}
 
-  // Build sorted list of [startIndex, link] pairs
-  const matches: { index: number; link: StepLink }[] = [];
-  for (const link of links) {
-    const idx = text.indexOf(link.text);
-    if (idx !== -1) matches.push({ index: idx, link });
+function renderTextWithLinks(text: string, links?: StepLink[]): ReactNode {
+  const segments: Segment[] = [];
+
+  // Explicit StepLink entries
+  if (links) {
+    for (const link of links) {
+      const idx = text.indexOf(link.text);
+      if (idx !== -1) segments.push({ index: idx, length: link.text.length, label: link.text, url: link.url });
+    }
   }
-  matches.sort((a, b) => a.index - b.index);
+
+  // Inline markdown links: [label](url)
+  const mdRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let match;
+  while ((match = mdRegex.exec(text)) !== null) {
+    segments.push({ index: match.index, length: match[0].length, label: match[1], url: match[2] });
+  }
+
+  if (segments.length === 0) return text;
+
+  segments.sort((a, b) => a.index - b.index);
 
   const parts: ReactNode[] = [];
   let cursor = 0;
-  for (const { index, link } of matches) {
-    if (index > cursor) parts.push(text.slice(cursor, index));
+  for (const seg of segments) {
+    if (seg.index < cursor) continue; // skip overlapping matches
+    if (seg.index > cursor) parts.push(text.slice(cursor, seg.index));
     parts.push(
       <a
-        key={link.url}
-        href={link.url}
+        key={`${seg.url}-${seg.index}`}
+        href={seg.url}
         target="_blank"
         rel="noopener noreferrer"
         className="underline text-osrs-gold hover:text-osrs-gold/70 transition-colors"
         onClick={(e) => e.stopPropagation()}
       >
-        {link.text}
+        {seg.label}
       </a>,
     );
-    cursor = index + link.text.length;
+    cursor = seg.index + seg.length;
   }
   if (cursor < text.length) parts.push(text.slice(cursor));
   return <>{parts}</>;
@@ -138,16 +157,18 @@ function StepBadge({ type, badge, region, assignmentRank }: { readonly type: str
   );
 }
 
-function StepImages({ relics, pactImage }: { readonly relics?: string[]; readonly pactImage?: string }) {
+function StepImages({ relics, pactImage, smallImage }: { readonly relics?: string[]; readonly pactImage?: string; readonly smallImage?: boolean }) {
   return (
     <>
       {pactImage && (
-        <img
-          src={pactImg(pactImage)}
-          alt={pactImage.replaceAll('_', ' ').replaceAll('.png', '')}
-          className="w-9 h-9 object-contain ml-2"
-          title={pactImage.replaceAll('_', ' ').replaceAll('.png', '')}
-        />
+        <span className="w-9 h-9 flex items-center justify-center flex-shrink-0 ml-2">
+          <img
+            src={pactImg(pactImage)}
+            alt={pactImage.replaceAll('_', ' ').replaceAll('.png', '')}
+            className={`object-contain ${smallImage ? 'w-[18px] h-[18px]' : 'w-9 h-9'}`}
+            title={pactImage.replaceAll('_', ' ').replaceAll('.png', '')}
+          />
+        </span>
       )}
       {relics && relics.length > 0 && (
         <span className="flex items-center gap-1.5 ml-4">
@@ -234,7 +255,8 @@ export default function ChecklistItem({ step, checked, onToggle, compact = false
   const isCheckable = step.type !== 'info';
   const isKeystone = step.type === 'keystone';
   const isAssignment = step.type === 'assignment';
-  const py = compact ? 'py-1.5' : 'py-2.5';
+  const isMinorAssignment = isAssignment && step.assignmentRank === 'Minor';
+  const py = compact || isMinorAssignment ? 'py-1.5' : 'py-2.5';
 
   if (step.modal) return <ModalItem step={step} compact={compact} />;
 
@@ -251,7 +273,7 @@ export default function ChecklistItem({ step, checked, onToggle, compact = false
         <div className="flex flex-wrap items-center gap-2">
           <StepBadge type={step.type} badge={styles.badge} region={step.region} assignmentRank={step.assignmentRank} />
           <span className={textClass}>{renderTextWithLinks(step.text, step.links)}</span>
-          <StepImages relics={step.relics} pactImage={isKeystone || isAssignment ? step.pactImage : undefined} />
+          <StepImages relics={step.relics} pactImage={isKeystone || isAssignment ? step.pactImage : undefined} smallImage={isAssignment && step.assignmentRank === 'Minor'} />
         </div>
         <PactPoints points={step.points} isReset={step.isReset} />
       </div>

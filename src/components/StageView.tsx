@@ -1,7 +1,11 @@
 'use client';
 
-import { Stage, TOTAL_PACTS, stages } from '@/data/guideData';
-import ChecklistItem from './ChecklistItem';
+import { useState } from 'react';
+import { Stage, Step, TOTAL_PACTS, stages } from '@/data/guideData';
+import type { StageMeta } from '@/hooks/useEditableStages';
+import EditableStageHeader from './EditableStageHeader';
+import EditableStepsList from './EditableStepsList';
+import AddBuildModal from './AddBuildModal';
 import PactPanel from './PactPanel';
 import GearPanel from './GearPanel';
 import FarmingTable from './FarmingTable';
@@ -17,6 +21,16 @@ interface Props {
   readonly onReset: () => void;
   readonly animDir: 'left' | 'right' | null;
   readonly totalPactsCompleted: number;
+  // Edit mode
+  readonly isEditMode: boolean;
+  readonly onToggleEditMode: () => void;
+  readonly onAddStep: (stageId: number, step: Step) => void;
+  readonly onDeleteStep: (stageId: number, stepId: string) => void;
+  readonly onEditStep: (stageId: number, stepId: string, newText: string) => void;
+  readonly onReorderSteps: (stageId: number, fromIndex: number, toIndex: number) => void;
+  readonly onEditStageMeta: (stageId: number, meta: StageMeta) => void;
+  readonly onAddBuild: (stageId: number, build: { name: string; url: string }) => void;
+  readonly onUpdateBuild: (stageId: number, oldUrl: string, build: { name: string; url: string }) => void;
 }
 
 export default function StageView({
@@ -30,7 +44,18 @@ export default function StageView({
   onReset,
   animDir,
   totalPactsCompleted,
+  isEditMode,
+  onToggleEditMode,
+  onAddStep,
+  onDeleteStep,
+  onEditStep,
+  onReorderSteps,
+  onEditStageMeta,
+  onAddBuild,
+  onUpdateBuild,
 }: Props) {
+  const [showAddBuild, setShowAddBuild] = useState(false);
+  const [editingBuild, setEditingBuild] = useState<{ name: string; url: string } | null>(null);
   const pactSteps = stage.steps.filter((s) => s.type === 'pact');
   const isOverview = stage.id === 0;
 
@@ -80,6 +105,19 @@ export default function StageView({
           <span className="text-[10px] text-red-700 uppercase tracking-wide leading-none">Pacts</span>
         </div>
 
+        {/* Edit mode toggle */}
+        <button
+          type="button"
+          onClick={onToggleEditMode}
+          className={`text-[11px] border rounded px-2.5 py-1 transition-colors ${
+            isEditMode
+              ? 'text-amber-300 border-amber-700/60 bg-amber-900/30 hover:bg-amber-900/50'
+              : 'text-osrs-muted border-osrs-border hover:text-osrs-parchment hover:border-osrs-muted'
+          }`}
+        >
+          {isEditMode ? '✎ Editing' : '✎ Edit'}
+        </button>
+
         {/* Reset button */}
         <button
           onClick={() => {
@@ -102,16 +140,15 @@ export default function StageView({
         >
           {/* Stage title */}
           <div className="flex-shrink-0 px-6 pt-5 pb-4 border-b border-osrs-border/60">
-            <div className="flex items-baseline gap-3">
-              {!isOverview && (
-                <span className="text-[11px] font-mono text-osrs-muted border border-osrs-border rounded px-2 py-0.5">
-                  Stage {stageIndex}
-                </span>
-              )}
-              <h1 className="text-2xl font-bold text-osrs-gold">{stage.title}</h1>
-              <span className="text-sm text-osrs-muted">{stage.subtitle}</span>
-            </div>
-            <p className="mt-2 text-sm text-osrs-muted leading-relaxed max-w-2xl">{stage.intro}</p>
+            <EditableStageHeader
+              title={stage.title}
+              subtitle={stage.subtitle}
+              intro={stage.intro}
+              stageIndex={stageIndex}
+              isOverview={isOverview}
+              isEditMode={isEditMode}
+              onSave={(meta) => onEditStageMeta(stage.id, meta)}
+            />
 
             {/* Build link */}
             {stage.buildLink && (
@@ -164,23 +201,82 @@ export default function StageView({
                     {l.label} ↗
                   </a>
                 ))}
+                {stage.customBuilds?.map((b) => (
+                  <a
+                    key={b.url}
+                    href={b.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onContextMenu={isEditMode ? (e) => { e.preventDefault(); setEditingBuild(b); } : undefined}
+                    className={`inline-flex items-center gap-1.5 text-[11px] text-osrs-muted hover:text-osrs-parchment border border-osrs-border hover:border-osrs-muted rounded px-2.5 py-1 transition-colors${isEditMode ? ' cursor-context-menu' : ''}`}
+                  >
+                    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M6 1l1.2 3.7H11l-3.1 2.3 1.2 3.7L6 8.5l-3.1 2.2 1.2-3.7L1 4.7h3.8L6 1z" />
+                    </svg>
+                    {b.name}
+                  </a>
+                ))}
+                {isEditMode && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAddBuild(true)}
+                    className="inline-flex items-center gap-1 text-[11px] text-osrs-gold/40 hover:text-osrs-gold/70 border border-dashed border-osrs-gold/20 hover:border-osrs-gold/40 rounded px-2.5 py-1 transition-colors"
+                  >
+                    <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                      <path d="M6 2v8M2 6h8" />
+                    </svg>
+                    Add Build
+                  </button>
+                )}
+              </div>
+            )}
+            {!stage.buildLink && isEditMode && (
+              <div className="mt-3">
+                <button
+                  type="button"
+                  onClick={() => setShowAddBuild(true)}
+                  className="inline-flex items-center gap-1 text-[11px] text-osrs-gold/40 hover:text-osrs-gold/70 border border-dashed border-osrs-gold/20 hover:border-osrs-gold/40 rounded px-2.5 py-1 transition-colors"
+                >
+                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M6 2v8M2 6h8" />
+                  </svg>
+                  Add Build
+                </button>
               </div>
             )}
           </div>
 
+          {showAddBuild && (
+            <AddBuildModal
+              onAdd={(build) => { onAddBuild(stage.id, build); }}
+              onClose={() => setShowAddBuild(false)}
+            />
+          )}
+
+          {editingBuild !== null && (
+            <AddBuildModal
+              initialName={editingBuild.name}
+              initialUrl={editingBuild.url}
+              onAdd={(build) => { onUpdateBuild(stage.id, editingBuild.url, build); }}
+              onClose={() => setEditingBuild(null)}
+            />
+          )}
+
           {/* Steps list */}
           <div className="flex-1 overflow-y-auto px-6 py-4 space-y-2 scrollbar-thin">
-            {stage.steps.length === 0 ? (
+            {stage.steps.length === 0 && !isEditMode ? (
               <p className="text-osrs-muted text-sm italic">No steps for this stage.</p>
             ) : (
-              stage.steps.map((step) => (
-                <ChecklistItem
-                  key={step.id}
-                  step={step}
-                  checked={!!progress[step.id]}
-                  onToggle={onToggle}
-                />
-              ))
+              <EditableStepsList
+                steps={stage.steps}
+                progress={progress}
+                onToggle={onToggle}
+                isEditMode={isEditMode}
+                onAddStep={(step) => onAddStep(stage.id, step)}
+                onDeleteStep={(stepId) => onDeleteStep(stage.id, stepId)}
+                onEditStep={(stepId, newText) => onEditStep(stage.id, stepId, newText)}
+                onReorderSteps={(from, to) => onReorderSteps(stage.id, from, to)}
+              />
             )}
             {stage.id === 1 && <FarmingTable />}
           </div>

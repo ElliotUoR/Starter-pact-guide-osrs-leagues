@@ -22,13 +22,14 @@ interface HunterStep {
 //
 // Catches = ceil((targetXP − startXP) / (xpBase × 16))
 //
-// Crimson Swift    34 xp → 544  leagues
-// Copper Longtail 61.2 xp → 979.2
-// Cerulean Twitch 64.5 xp → 1,032
-// Ruby Harvest     24 xp → 384
-// Tropical Wagtail 95.2 xp → 1,523.2
-// Snowy Knight     44 xp → 704
-// Black Warlock    54 xp → 864
+// Crimson Swift       34 xp → 544  leagues
+// Copper Longtail    61.2 xp → 979.2
+// Cerulean Twitch    64.5 xp → 1,032
+// Ruby Harvest        24 xp → 384
+// Tropical Wagtail   95.2 xp → 1,523.2
+// Snowy Knight        44 xp → 704
+// Embertailed Jerboa 168 xp → 2,688   (L39 XP = 36,473)
+// Black Warlock       54 xp → 864
 const STEPS: HunterStep[] = [
   {
     level: 1,
@@ -120,6 +121,21 @@ const STEPS: HunterStep[] = [
       // start XP 22406. per catch 704
       // ceil(39106/704)=56
       { level: 45, catches: 56 },
+    ],
+  },
+  {
+    level: 39,
+    creature: 'Embertailed Jerboa',
+    url: 'https://oldschool.runescape.wiki/w/Embertailed_jerboa',
+    location: 'Auburn Valley / Auburnvale',
+    xpBase: 168,
+    recommended: true,
+    breakpoints: [
+      // start XP 36,473. per catch 2,688
+      // ceil(25039/2688)=10, ceil(31510/2688)=12, ceil(297331/2688)=111
+      { level: 45, catches: 10 },
+      { level: 46, catches: 12 },
+      { level: 62, catches: 111 },
     ],
   },
   {

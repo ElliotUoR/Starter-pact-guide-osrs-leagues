@@ -6,14 +6,15 @@ interface Props {
 
 export default function HunterRumoursModal({ onClose }: Props) {
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4"
-      onClick={onClose}
-    >
-      <div
-        className="bg-osrs-panel border border-osrs-border rounded-lg w-full max-w-2xl max-h-[85vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
+      <button
+        type="button"
+        aria-label="Close modal"
+        className="absolute inset-0 w-full cursor-default"
+        onClick={onClose}
+      />
+      <div className="relative bg-osrs-panel border border-osrs-border rounded-lg w-full max-w-2xl max-h-[85vh] overflow-y-auto">
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-osrs-border">
           <div>
@@ -60,8 +61,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
               className="text-osrs-gold underline hover:text-osrs-gold/70 transition-colors"
             >
               Hunter Guild
-            </a>
-            .
+            </a>.
           </p>
           <p className="text-sm text-osrs-muted leading-relaxed">
             Unlike Slayer (fixed kills), rumours can finish at any point up to a maximum limit. You
@@ -90,7 +90,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
           {/* Top-left: Novice */}
           <div className="border border-osrs-border rounded-lg p-3 bg-osrs-card">
             <p className="text-[10px] uppercase tracking-widest text-osrs-muted mb-2">
-              Novice Setup
+              Novice Setup <span className="font-mono normal-case tracking-normal text-osrs-gold/70">· 46</span>
             </p>
             <ul className="space-y-1.5">
               <li className="text-sm text-osrs-parchment">
@@ -108,7 +108,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
           {/* Top-right: Adept */}
           <div className="border border-osrs-border rounded-lg p-3 bg-osrs-card">
             <p className="text-[10px] uppercase tracking-widest text-osrs-muted mb-2">
-              Adept Setup
+              Adept Setup <span className="font-mono normal-case tracking-normal text-osrs-gold/70">· 57</span>
             </p>
             <ul className="space-y-1.5">
               <li className="text-sm text-osrs-parchment">
@@ -121,7 +121,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
               </li>
               <li className="text-sm text-osrs-parchment">
                 • Use <span className="text-osrs-parchment font-semibold">Cervus</span> — always
-                gives red chins
+                gives red chins or black warlocks
               </li>
             </ul>
           </div>
@@ -129,7 +129,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
           {/* Bottom-left: Expert */}
           <div className="border border-osrs-border rounded-lg p-3 bg-osrs-card">
             <p className="text-[10px] uppercase tracking-widest text-osrs-muted mb-2">
-              Expert Setup
+              Expert Setup <span className="font-mono normal-case tracking-normal text-osrs-gold/70">· 72</span>
             </p>
             <ul className="space-y-1.5">
               <li className="text-sm text-osrs-parchment">
@@ -143,7 +143,8 @@ export default function HunterRumoursModal({ onClose }: Props) {
               <li className="text-sm text-osrs-parchment">
                 • At <span className="text-osrs-gold font-mono font-bold">75</span>: use{' '}
                 <span className="text-osrs-parchment font-semibold">Cervus</span> to block sunlight
-                moths
+                moths{' '}
+                <span className="text-osrs-muted text-xs">(optional)</span>
               </li>
               <li className="text-sm text-osrs-muted border-t border-osrs-border/50 pt-2 mt-1 leading-snug">
                 <span className="text-osrs-parchment font-semibold">Alternate at 72:</span> block
@@ -156,7 +157,7 @@ export default function HunterRumoursModal({ onClose }: Props) {
           {/* Bottom-right: Master */}
           <div className="border border-osrs-border rounded-lg p-3 bg-osrs-card">
             <p className="text-[10px] uppercase tracking-widest text-osrs-muted mb-2">
-              Master Setup
+              Master Setup <span className="font-mono normal-case tracking-normal text-osrs-gold/70">· 91</span>
             </p>
             <p className="text-xs text-osrs-muted mb-2 leading-snug">
               2 extra loot rolls but cannot fully do red chins — takes more time to set up.
