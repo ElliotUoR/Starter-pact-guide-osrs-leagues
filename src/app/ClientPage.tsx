@@ -11,7 +11,7 @@ const TOTAL_STAGES = baseStages.length;
 export default function ClientPage() {
   const { progress, toggle, reset, loaded: progressLoaded } = useProgress();
   const { stage: stageIndex, setStage, loaded: stageLoaded } = useCurrentStage(TOTAL_STAGES - 1);
-  const { stages, loaded: stagesLoaded, addStep, deleteStep, editStep, reorderSteps, addBuild, updateBuild, editStageMeta } = useEditableStages();
+  const { stages, loaded: stagesLoaded, addStep, deleteStep, editStep, reorderSteps, addBuild, updateBuild, editStageMeta, resetEdits } = useEditableStages();
   const [animDir, setAnimDir] = useState<'left' | 'right' | null>(null);
   const [isEditMode, setIsEditMode] = useState(false);
 
@@ -41,6 +41,26 @@ export default function ClientPage() {
   const handleReset = useCallback(() => {
     reset();
   }, [reset]);
+
+  const handleBakeEdits = useCallback(async () => {
+    try {
+      const raw = localStorage.getItem('osrs-league-edits');
+      const payload = raw ? JSON.parse(raw) as unknown : { steps: {}, meta: {} };
+      const res = await fetch('/api/bake-edits', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        alert('Bake failed — check the console.');
+        return;
+      }
+      resetEdits();
+      globalThis.location.reload();
+    } catch {
+      alert('Bake failed — API route not available in this environment.');
+    }
+  }, [resetEdits]);
 
   const totalPactsCompleted = stages
     .flatMap((s) => s.steps.filter((st) => st.type === 'pact'))
@@ -83,6 +103,7 @@ export default function ClientPage() {
       onEditStageMeta={editStageMeta}
       onAddBuild={addBuild}
       onUpdateBuild={updateBuild}
+      onBakeEdits={process.env.NODE_ENV === 'development' ? handleBakeEdits : undefined}
     />
   );
 }

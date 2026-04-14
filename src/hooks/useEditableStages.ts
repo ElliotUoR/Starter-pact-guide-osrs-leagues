@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { stages as baseStages, type Stage, type Step } from '@/data/guideData';
+import bakedOverrides from '@/data/persistedOverrides.json';
 
 const EDITS_KEY = 'osrs-league-edits';
 
@@ -17,22 +18,38 @@ interface Overrides {
   meta: Record<number, StageMeta>;
 }
 
+function parseOverrides(raw: string): Overrides {
+  const parsed = JSON.parse(raw) as Record<string, unknown>;
+  // New format has a 'steps' object key; old format had numeric keys mapping to Step arrays
+  if ('steps' in parsed && typeof parsed.steps === 'object' && !Array.isArray(parsed.steps)) {
+    return {
+      steps: (parsed.steps ?? {}) as Record<number, Step[]>,
+      meta: (parsed.meta ?? {}) as Record<number, StageMeta>,
+    };
+  }
+  // Migrate old format: root was Record<number, Step[]>
+  return { steps: parsed as unknown as Record<number, Step[]>, meta: {} };
+}
+
+function mergeOverrides(base: Overrides, local: Overrides): Overrides {
+  // Local (localStorage) wins per stageId; baked is fallback
+  return {
+    steps: { ...base.steps, ...local.steps },
+    meta: { ...base.meta, ...local.meta },
+  };
+}
+
 function loadOverrides(): Overrides {
+  const baked: Overrides = {
+    steps: (bakedOverrides.steps ?? {}) as Record<number, Step[]>,
+    meta: (bakedOverrides.meta ?? {}) as Record<number, StageMeta>,
+  };
   try {
     const raw = localStorage.getItem(EDITS_KEY);
-    if (!raw) return { steps: {}, meta: {} };
-    const parsed = JSON.parse(raw) as Record<string, unknown>;
-    // New format has a 'steps' object key; old format had numeric keys mapping to Step arrays
-    if ('steps' in parsed && typeof parsed.steps === 'object' && !Array.isArray(parsed.steps)) {
-      return {
-        steps: (parsed.steps ?? {}) as Record<number, Step[]>,
-        meta: (parsed.meta ?? {}) as Record<number, StageMeta>,
-      };
-    }
-    // Migrate old format: root was Record<number, Step[]>
-    return { steps: parsed as unknown as Record<number, Step[]>, meta: {} };
+    if (!raw) return baked;
+    return mergeOverrides(baked, parseOverrides(raw));
   } catch {
-    return { steps: {}, meta: {} };
+    return baked;
   }
 }
 

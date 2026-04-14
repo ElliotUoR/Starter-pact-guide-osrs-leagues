@@ -1,0 +1,1014 @@
+{
+  "steps": {
+    "0": [
+      {
+        "id": "s0-1",
+        "text": "Regions: Kandarin → Kourend → Prifddinas. Kourend is needed for Slayer — have it by tier 6, but it is the weakest of the three for pacts.",
+        "type": "info"
+      },
+      {
+        "id": "s0-2",
+        "text": "Core problem: Mage accuracy falls flat against some required monsters Solution: Air setup is point efficient; hybrid into melee where magic underperforms (Tekton, Sol, Olm left hand).",
+        "type": "info"
+      },
+      {
+        "id": "s0-3",
+        "text": "Exception: Olm head still wants ranged — but magic still slightly out dps' vanilla ranged options",
+        "type": "info"
+      },
+      {
+        "id": "s0-4",
+        "text": "Node strategy: Take all accuracy nodes first, then dip into melee speed attacks as the build matures.",
+        "type": "info"
+      },
+      {
+        "id": "s0-5",
+        "text": "This guide covers assumed progress only — relic picks are not included.",
+        "type": "warning"
+      },
+      {
+        "id": "edit-1776122962122-vgtvq",
+        "text": "If taking different regions skip region specific stages!",
+        "type": "warning"
+      }
+    ],
+    "1": [
+      {
+        "id": "s1-p1",
+        "text": "Complete the Leagues Tutorial",
+        "type": "pact",
+        "points": 10,
+        "region": "Global"
+      },
+      {
+        "id": "s1-a1",
+        "text": "Assign Resource Node",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "Resources_Pact.png"
+      },
+      {
+        "id": "s1-p2",
+        "text": "Open the Leagues Menu",
+        "type": "pact",
+        "points": 10,
+        "region": "Global"
+      },
+      {
+        "id": "s1-a2",
+        "text": "Assign Ranged Echo Node",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "Ranged_Echo_Pact.png"
+      },
+      {
+        "id": "s1-r1",
+        "text": "Unlock first relic — Endless Harvest recommended",
+        "type": "relic",
+        "relics": [
+          "Endless_Harvest.png",
+          "Barbarian_Gathering.png",
+          "Abundance.png"
+        ]
+      },
+      {
+        "id": "s1-pts2",
+        "text": "Get enough points for 2nd relic",
+        "type": "step"
+      },
+      {
+        "id": "s1-r2",
+        "text": "Unlock Woodsman relic",
+        "type": "relic",
+        "relics": [
+          "Woodsman.png"
+        ]
+      },
+      {
+        "id": "s1-arcuani",
+        "text": "When you have gp from rumours, visit Arcuani's Archery Supplies to buy bows and ammo OR knives to level to 45 ranged",
+        "type": "info",
+        "links": [
+          {
+            "text": "Arcuani's Archery Supplies",
+            "url": "https://oldschool.runescape.wiki/w/Arcuani%27s_Archery_Supplies"
+          }
+        ]
+      },
+      {
+        "id": "s1-traps",
+        "text": "You can get birdsnares and box traps from Fortis General Store or the Hunter Guild (requires 46 Hunter) - Buy 3 bird snares and 5 box traps",
+        "type": "info",
+        "links": [
+          {
+            "text": "Fortis General Store",
+            "url": "https://oldschool.runescape.wiki/w/Fortis_General_Store"
+          },
+          {
+            "text": "Hunter Guild",
+            "url": "https://oldschool.runescape.wiki/w/Hunter_Guild"
+          }
+        ]
+      },
+      {
+        "id": "edit-1776122642955-vzx7o",
+        "text": "Get 45 Fletching for 3-tick Hunting with box traps (Optional)",
+        "type": "step"
+      },
+      {
+        "id": "s1-fletch45modal",
+        "text": "Click here for lvl 45 fletching guide",
+        "type": "info",
+        "modal": "fletching-45"
+      },
+      {
+        "id": "edit-1776122704848-cvo75",
+        "text": "With a knife and teak log (and 45 fletching) you can 3-tick hunt",
+        "type": "info"
+      },
+      {
+        "id": "s1-nounlock",
+        "text": "DO NOT UNLOCK ANY OTHER REGIONS UNTIL COMPLETING HUNTER",
+        "type": "warning"
+      },
+      {
+        "id": "s1-h46",
+        "text": "Get 46 Hunter for rumours",
+        "type": "step"
+      },
+      {
+        "id": "s1-h46modal",
+        "text": "Click here for lvl 46 hunter guide",
+        "type": "info",
+        "modal": "hunter-46"
+      },
+      {
+        "id": "s1-rumours",
+        "text": "Spam hunter rumours",
+        "type": "step"
+      },
+      {
+        "id": "s1-1",
+        "text": "Get 91 Hunter and 74 Fletching — transmute EH logs or use rumour sack logs for quick xp",
+        "type": "step"
+      },
+      {
+        "id": "s1-hunterinfo",
+        "text": "Click here for more info on setting up hunter rumours",
+        "type": "info",
+        "modal": "hunter-rumours"
+      },
+      {
+        "id": "s1-pts3",
+        "text": "Get enough points for 3rd relic",
+        "type": "step"
+      },
+      {
+        "id": "s1-r3",
+        "text": "Unlock Bank Heist, Evil Eye, Map of Alacrity",
+        "type": "relic",
+        "relics": [
+          "Bank_Heist.png",
+          "Evil_Eye.png",
+          "Map_of_Alacrity.png"
+        ]
+      },
+      {
+        "id": "s1-mapinfo",
+        "text": "Map of Alacrity has convenient teleports for red chins and varlamore tree patch",
+        "type": "info"
+      },
+      {
+        "id": "s1-pts4",
+        "text": "Get enough points for 4th relic",
+        "type": "step"
+      },
+      {
+        "id": "s1-pts4info",
+        "text": "Get 99 hunter and level fletching higher for points if there are tasks",
+        "type": "info"
+      },
+      {
+        "id": "s1-r4",
+        "text": "Unlock Transmutation",
+        "type": "relic",
+        "relics": [
+          "Transmutation.png"
+        ]
+      },
+      {
+        "id": "s1-transinfo",
+        "text": "After unlocking use rumour money to buy runes to transmute, e.g. 12k fire runes will take an hour to convert to 12k chaos runes",
+        "type": "info",
+        "links": [
+          {
+            "text": "buy runes",
+            "url": "https://oldschool.runescape.wiki/w/Tal_Teklan_Rune_Shop"
+          }
+        ]
+      },
+      {
+        "id": "s1-2",
+        "text": "Get 43 Prayer (6,293 maingame xp) from 28 sunkissed bones — or transmute 42 regular bones to superior then bury",
+        "type": "step"
+      },
+      {
+        "id": "s1-3",
+        "text": "If tier 3+: only need 19 sunkissed or 28 regular bones. Might as well grab ranged & magic prayer too (requires 45 Prayer).",
+        "type": "info"
+      },
+      {
+        "id": "s1-boneinfo",
+        "text": "To bury sunkissed bones, break them into shards with a chisel, then sacrifice with blessed wine at the Libation bowl",
+        "type": "info",
+        "links": [
+          {
+            "text": "blessed wine",
+            "url": "https://oldschool.runescape.wiki/w/Jug_of_blessed_wine"
+          },
+          {
+            "text": "Libation bowl",
+            "url": "https://oldschool.runescape.wiki/w/Libation_bowl"
+          }
+        ]
+      },
+      {
+        "id": "s1-p5",
+        "text": "Use the Protect from Melee Prayer",
+        "type": "pact",
+        "points": 30,
+        "region": "Global"
+      },
+      {
+        "id": "edit-1776112710960-zb78h",
+        "text": "Assign Crossbow Echo node",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "cbow_echo_pact.png"
+      },
+      {
+        "id": "s1-p3",
+        "text": "Defeat a Hill Giant",
+        "type": "pact",
+        "points": 10,
+        "region": "Global",
+        "links": [
+          {
+            "text": "Hill Giant",
+            "url": "https://oldschool.runescape.wiki/w/Hill_Giant"
+          }
+        ]
+      },
+      {
+        "id": "s1-hginfo",
+        "text": "Hill Giants are found in south Avium Savannah and have a 25% earth weakness.",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776112197909-g40ug",
+        "text": "You can get runes from [Tal Teklan](https://oldschool.runescape.wiki/w/Tal_Teklan_Rune_Shop) or [The Runic Emporium](https://oldschool.runescape.wiki/w/The_Runic_Emporium)",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776121933658-06ghy",
+        "text": "Assign minor accuracy node",
+        "type": "assignment",
+        "assignmentRank": "Minor",
+        "pactImage": "accuracy_pact.png"
+      },
+      {
+        "id": "s1-seeds",
+        "text": "Setup seeds and saplings for farming, use transmute to obtain desired amount of seeds (and supercompost) below",
+        "type": "step"
+      },
+      {
+        "id": "s1-4",
+        "text": "Plant Teak at the hardwood patch on day 1 — 15hr grow timer, 58,320 xp",
+        "type": "warning"
+      },
+      {
+        "id": "s1-5",
+        "text": "Plant all seeds gathered from Hunter at Varlamore patches — need 65 Farming ASAP",
+        "type": "warning"
+      },
+      {
+        "id": "s1-6",
+        "text": "Enable farming patch notifications and always use supercompost",
+        "type": "step"
+      },
+      {
+        "id": "s1-7",
+        "text": "See the sapling quantity table below — always bring the recommended spares",
+        "type": "info"
+      }
+    ],
+    "2": [
+      {
+        "id": "s2-1",
+        "text": "Train Ranged to 45 (7,700 maingame xp — ~5,200 at relic 3 with 1.5× xp)",
+        "type": "step"
+      },
+      {
+        "id": "s2-1info",
+        "text": "Can afk at gemstone crab",
+        "type": "info"
+      },
+      {
+        "id": "s2-slayer",
+        "text": "Get 33 Slayer (Skippable)",
+        "type": "step"
+      },
+      {
+        "id": "s2-slayerinfo",
+        "text": "Can combo this with training ranged, get task from any slayer master (may require unlocking a region)",
+        "type": "info"
+      },
+      {
+        "id": "s2-lantern",
+        "text": "Buy Bug Lantern",
+        "type": "step",
+        "links": [
+          {
+            "text": "Bug Lantern",
+            "url": "https://oldschool.runescape.wiki/w/Bug_lantern"
+          }
+        ]
+      },
+      {
+        "id": "s2-lanterninfo",
+        "text": "Required for damaging Harpie Bug Swarms",
+        "type": "info",
+        "links": [
+          {
+            "text": "Harpie Bug Swarms",
+            "url": "https://oldschool.runescape.wiki/w/Harpie_Bug_Swarm"
+          }
+        ]
+      },
+      {
+        "id": "s2-skipinfo",
+        "text": "Bug Lantern and 33 Slayer can be skipped if killing another region's multi combat monsters instead, e.g. Ankous in Catacombs of Kourend",
+        "type": "info",
+        "links": [
+          {
+            "text": "Ankous",
+            "url": "https://oldschool.runescape.wiki/w/Ankou"
+          },
+          {
+            "text": "Catacombs of Kourend",
+            "url": "https://oldschool.runescape.wiki/w/Catacombs_of_Kourend"
+          }
+        ]
+      },
+      {
+        "id": "s2-2",
+        "text": "Unlock Kandarin or Kourend and catch grey chins",
+        "type": "step",
+        "links": [
+          {
+            "text": "grey chins",
+            "url": "https://oldschool.runescape.wiki/w/Grey_chinchompa"
+          }
+        ]
+      },
+      {
+        "id": "s2-3",
+        "text": "Train Ranged to 55 at Harpie Bug Swarms/another region's multi combat monsters using grey chins",
+        "type": "step"
+      },
+      {
+        "id": "s2-4",
+        "text": "Train Ranged to 65 at Harpie Bug Swarms/another region's multi combat monsters using red chins",
+        "type": "step"
+      },
+      {
+        "id": "s2-p6",
+        "text": "Reach Combat Level 50",
+        "type": "pact",
+        "points": 30,
+        "region": "Global"
+      },
+      {
+        "id": "s2-cmb",
+        "text": "50 Combat = 65 Ranged + 50 Hitpoints + 46 Prayer",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776122109815-91be9",
+        "text": "Assign Major Accuracy Node",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "accuracy_pact.png"
+      },
+      {
+        "id": "s2-shcb",
+        "text": "Create a Sunlight Hunter Crossbow",
+        "type": "step",
+        "links": [
+          {
+            "text": "Sunlight Hunter Crossbow",
+            "url": "https://oldschool.runescape.wiki/w/Sunlight_hunter_crossbow"
+          }
+        ]
+      },
+      {
+        "id": "s2-shcbinfo",
+        "text": "Hunter crossbow + sunlight antelope antler — requires 74 Fletching",
+        "type": "info"
+      },
+      {
+        "id": "s2-shcbcharter",
+        "text": "You can buy a hunter crossbow from Sunset Coast charter shop",
+        "type": "info",
+        "links": [
+          {
+            "text": "Sunset Coast charter shop",
+            "url": "https://oldschool.runescape.wiki/w/Sunset_Coast"
+          }
+        ]
+      },
+      {
+        "id": "s2-mab",
+        "text": "Gather moonlight antler bolts (at least 500)",
+        "type": "step"
+      },
+      {
+        "id": "s2-mabinfo",
+        "text": "Make these by catching Moonlight antelopes and using a chisel on the antlers",
+        "type": "info",
+        "links": [
+          {
+            "text": "Moonlight antelopes",
+            "url": "https://oldschool.runescape.wiki/w/Moonlight_antelope"
+          }
+        ]
+      },
+      {
+        "id": "s2-6",
+        "text": "Complete the Death on the Isle quest",
+        "type": "step",
+        "links": [
+          {
+            "text": "Death on the Isle",
+            "url": "https://oldschool.runescape.wiki/w/Death_on_the_Isle"
+          }
+        ]
+      },
+      {
+        "id": "s2-6info",
+        "text": "Awards 40k Crafting xp",
+        "type": "info"
+      },
+      {
+        "id": "s2-5",
+        "text": "Get 63 Crafting via shopping or gem mining in Karamja — transmute to highest gem cuttable",
+        "type": "step",
+        "links": [
+          {
+            "text": "shopping",
+            "url": "https://oldschool.runescape.wiki/w/Toci%27s_Gem_Store"
+          }
+        ]
+      },
+      {
+        "id": "s2-5a",
+        "text": "43–55 takes 136/91 uncut diamonds at 8x/12x",
+        "type": "info"
+      },
+      {
+        "id": "s2-5b",
+        "text": "55–63 takes 184/123 uncut dragonstones at 8x/12x",
+        "type": "info"
+      },
+      {
+        "id": "s2-7",
+        "text": "Craft Green Dragonhide set (body, vbrace, legs, shield) after transmuting",
+        "type": "step"
+      },
+      {
+        "id": "s2-7info",
+        "text": "Tan the dragonhide at Chouani",
+        "type": "info",
+        "links": [
+          {
+            "text": "Chouani",
+            "url": "https://oldschool.runescape.wiki/w/Chouani"
+          }
+        ]
+      },
+      {
+        "id": "s2-8",
+        "text": "Craft Snakeskin Boots after transmuting",
+        "type": "step"
+      },
+      {
+        "id": "s2-9",
+        "text": "Craft a Coif",
+        "type": "step"
+      },
+      {
+        "id": "s2-10",
+        "text": "Optional: 70 Crafting for Power Ammy",
+        "type": "step"
+      },
+      {
+        "id": "s2-10info",
+        "text": "63–70 via dragonstones: 8x = 336 gems, 12x = 224 gems",
+        "type": "info"
+      },
+      {
+        "id": "s2-p1",
+        "text": "1 Hueycoatl Kill",
+        "type": "pact",
+        "points": 80,
+        "region": "Varlamore"
+      },
+      {
+        "id": "s2-11",
+        "text": "Mage route (3.5 DPS): 70 Magic for Earth Wave, buy Earth Staff from Auburnvale, get Full Mystic if Kandarin is unlocked. Needs ~8hrs of transmutes.",
+        "type": "info"
+      },
+      {
+        "id": "s2-12",
+        "text": "Range route is ~1.3 DPS at Huey with prayer up. Mage is ~3.5 DPS — significantly better if you can afford the transmutes.",
+        "type": "info"
+      },
+      {
+        "id": "s2-hueyworld",
+        "text": "Try worlds with high population — Huey can be massed so more people the better",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776122176118-6wn1r",
+        "text": "Assign Major Resources Pact",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "Resources_Pact.png"
+      },
+      {
+        "id": "s2-p2",
+        "text": "Defeat a Steel Dragon on Karamja",
+        "type": "pact",
+        "points": 30,
+        "region": "Karamja"
+      },
+      {
+        "id": "s2-p2info",
+        "text": "You can get an anti-dragon shield from any slayer master in leagues",
+        "type": "info",
+        "links": [
+          {
+            "text": "any slayer master",
+            "url": "https://oldschool.runescape.wiki/w/Slayer_Equipment_(shop)"
+          }
+        ]
+      },
+      {
+        "id": "edit-1776122214007-8vycs",
+        "text": "Assign minor +1% Ranged Damage node",
+        "type": "assignment",
+        "assignmentRank": "Minor",
+        "pactImage": "cbow_echo_pact.png"
+      },
+      {
+        "id": "s2-p3",
+        "text": "Defeat a TzHaar",
+        "type": "pact",
+        "points": 30,
+        "region": "Karamja"
+      },
+      {
+        "id": "s2-p3info",
+        "text": "Can safespot or just pray against style",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776122453713-gfuzs",
+        "text": "Assign 70% Crossbow Damage node",
+        "type": "assignment",
+        "assignmentRank": "Major",
+        "pactImage": "big_slow_cbow_pact.png"
+      }
+    ],
+    "3": [
+      {
+        "id": "s3k-p1",
+        "text": "Defeat a Demonic Gorilla",
+        "type": "pact",
+        "points": 80,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776110954709-t7tpm",
+        "text": "Bring mage (water wave) and ranged, and lots food/prayer",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776122529285-owc4r",
+        "text": "Assign minor +1% ranged damage node",
+        "type": "assignment",
+        "assignmentRank": "Minor",
+        "pactImage": "cbow_echo_pact.png"
+      },
+      {
+        "id": "s3k-p2",
+        "text": "Defeat a Mithril Dragon — pray melee, bring good food (hits 18s). Can be done before Huey.",
+        "type": "pact",
+        "points": 80,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776110989422-528oc",
+        "text": "Bring anti-dragon shield, range is still best here. Stand in melee range.",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776122543653-h9znk",
+        "text": "Assign minor +1% ranged damage node",
+        "type": "assignment",
+        "assignmentRank": "Minor",
+        "pactImage": "cbow_echo_pact.png"
+      }
+    ],
+    "4": [
+      {
+        "id": "s3-region",
+        "text": "Unlock second region",
+        "type": "step"
+      },
+      {
+        "id": "s3-pts5",
+        "text": "Get enough points for 5th relic — if within reach / not done already",
+        "type": "step"
+      },
+      {
+        "id": "s3-r5",
+        "text": "Unlock Larcenist relic",
+        "type": "relic",
+        "relics": [
+          "Larcenist.png"
+        ]
+      },
+      {
+        "id": "s3-p1",
+        "text": "Open 1 Grubby Chest",
+        "type": "pact",
+        "points": 10,
+        "region": "Kourend"
+      },
+      {
+        "id": "s3-p1info",
+        "text": "Grubby Chest requires 57 Thieving",
+        "type": "info",
+        "links": [
+          {
+            "text": "Grubby Chest",
+            "url": "https://oldschool.runescape.wiki/w/Grubby_chest"
+          }
+        ]
+      },
+      {
+        "id": "s3-1",
+        "text": "Assign the Max Hit keystone",
+        "type": "keystone",
+        "pactImage": "CBow_MaxHit_Pact.png"
+      },
+      {
+        "id": "s3-3",
+        "text": "Train to 71 Crafting for Power Ammy + Blue Dragonhide set",
+        "type": "step"
+      },
+      {
+        "id": "s3-p2",
+        "text": "150 Lizardmen Shaman Kills",
+        "type": "pact",
+        "points": 30,
+        "region": "Kourend"
+      },
+      {
+        "id": "s3-2",
+        "text": "For Shayzien armour: EH barb fish until ~40 Strength — enough to prayer flick through. ~40 min at 15 sec per kill.",
+        "type": "info",
+        "links": [
+          {
+            "text": "Shayzien armour",
+            "url": "https://oldschool.runescape.wiki/w/Shayzien_armour"
+          }
+        ]
+      },
+      {
+        "id": "s3-keystone2",
+        "text": "Assign the Double Accuracy Roll Keystone",
+        "type": "keystone",
+        "pactImage": "CBow_DoubleAccuracy_Roll_Pact.png"
+      },
+      {
+        "id": "s3-4",
+        "text": "Plant Hespori seed ASAP — ~6.4 hrs to grow",
+        "type": "step"
+      }
+    ],
+    "6": [
+      {
+        "id": "s5-p1",
+        "text": "Kill a Black Dragon in Tirannwn",
+        "type": "pact",
+        "points": 30,
+        "region": "Tirannwn"
+      },
+      {
+        "id": "edit-1776124211326-noqgj",
+        "text": "Found at [Mynydd](https://oldschool.runescape.wiki/w/Mynydd)",
+        "type": "info"
+      },
+      {
+        "id": "s5-p2",
+        "text": "Complete the Corrupted Gauntlet",
+        "type": "pact",
+        "points": 80,
+        "region": "Tirannwn"
+      },
+      {
+        "id": "edit-1776124423047-lrbxc",
+        "text": "You should have 80+ ranged and 70+ magic, one kill should be do-able",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776124435515-vamq1",
+        "text": "Get Perfected Weapons and T2 armour",
+        "type": "info"
+      },
+      {
+        "id": "s5-2",
+        "text": "Stock up on Ranarrs + Snapegrass for prayer sustain going forward",
+        "type": "step"
+      },
+      {
+        "id": "s5-3",
+        "text": "Transmute + cook raw fish for best HP food",
+        "type": "step"
+      },
+      {
+        "id": "s5-4",
+        "text": "Train to 70 Smithing for Zalcano — ore transmute or iron ore works (61.5k maingame xp at 12x)",
+        "type": "step"
+      },
+      {
+        "id": "s5-5",
+        "text": "Complete Scrambled Eggs quest for 5k Smithing xp",
+        "type": "step"
+      },
+      {
+        "id": "s5-6",
+        "text": "Plan for 89 Crafting for Zenyte jewelry — requires 70 Smithing + Crafting when training in Priff",
+        "type": "info"
+      }
+    ],
+    "7": [
+      {
+        "id": "s6-1",
+        "text": "Get 95 Slayer for Hydras — this is top priority",
+        "type": "warning"
+      },
+      {
+        "id": "edit-1776125739596-lx92r",
+        "text": "After getting 95 slayer you can respec into mage with just 19 points! Kill thermy for 20p, take resource and farm the echo weapons!",
+        "type": "warning"
+      },
+      {
+        "id": "s6-2",
+        "text": "Farm Antler Guard from Slayer tasks — massive offhand upgrade, do not skip mature/elder custodian stalkers until owned",
+        "type": "step"
+      },
+      {
+        "id": "s6-p1",
+        "text": "Defeat Zalcano",
+        "type": "pact",
+        "points": 80,
+        "region": "Tirannwn"
+      },
+      {
+        "id": "edit-1776125135173-8twr8",
+        "text": "70 smithing/mining req",
+        "type": "info"
+      },
+      {
+        "id": "s6-p3",
+        "text": "1 Skotizo Kill",
+        "type": "pact",
+        "points": 80,
+        "region": "Kourend"
+      },
+      {
+        "id": "edit-1776125076119-q0tmu",
+        "text": "Should be easy at this point once you get the totem",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776125169864-p9qmm",
+        "text": "Decide if you need to respec into 100% ammo throw slayer build",
+        "type": "step"
+      },
+      {
+        "id": "edit-1776125244413-c4ceg",
+        "text": "Can do with just 16/17 points, will generate chins, depends how fast you are using chins.",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776125296032-txt6c",
+        "text": "If you do respec, make sure you have atleast 2 reset points and have no more non-chin combat left.",
+        "type": "warning"
+      },
+      {
+        "id": "s6-p2",
+        "text": "Equip a Dark Bow in Tirannwn",
+        "type": "pact",
+        "points": 80,
+        "region": "Tirannwn"
+      },
+      {
+        "id": "edit-1776124983596-459kz",
+        "text": "~1/102 from Dark Beasts",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776125412871-nxsca",
+        "text": "Awkward without crossbow nodes",
+        "type": "info"
+      },
+      {
+        "id": "s6-p7",
+        "text": "Equip an Occult Necklace",
+        "type": "pact",
+        "points": 200,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776125011991-nq178",
+        "text": "~1/102 from Smoke Devil",
+        "type": "info"
+      },
+      {
+        "id": "edit-1776126376203-jx4le",
+        "text": "Kraken tasks might be best left after respec and obtaining echo weps, will become very fast and you can just kill kraken boss for all pacts.",
+        "type": "warning"
+      },
+      {
+        "id": "s6-p5",
+        "text": "Equip a Trident of the Seas",
+        "type": "pact",
+        "points": 80,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776124782343-vevvi",
+        "text": "Annoying to kill [krakens](https://oldschool.runescape.wiki/w/Kraken#Kraken) trident is ~1/102",
+        "type": "info"
+      },
+      {
+        "id": "s6-p6",
+        "text": "Equip an Abyssal Tentacle",
+        "type": "pact",
+        "points": 200,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776124929252-m9kku",
+        "text": "1/80 from Kraken boss, much rarer from kraken mobs",
+        "type": "info"
+      },
+      {
+        "id": "s6-p4",
+        "text": "Defeat the Kraken Boss 50 Times",
+        "type": "pact",
+        "points": 80,
+        "region": "Kandarin"
+      },
+      {
+        "id": "edit-1776124835158-zu0td",
+        "text": "Consider leaving this and trident task to last, or after respec.",
+        "type": "info"
+      },
+      {
+        "id": "s6-3",
+        "text": "If you end up at only 25 pacts, drop echo throw from the build",
+        "type": "info"
+      }
+    ],
+    "8": [
+      {
+        "id": "s7-1",
+        "text": "Respec the build for Echo Thermonuclear Smoke Devil",
+        "type": "step"
+      },
+      {
+        "id": "s7-2",
+        "text": "Kill Echo Thermy on Slayer task — do not forget prayers!",
+        "type": "step"
+      },
+      {
+        "id": "edit-1776126761069-cqxet",
+        "text": "Wind Wave at 80 magic+ is still respectable here, just remember to turn on all prayers!",
+        "type": "warning"
+      },
+      {
+        "id": "s7-p1",
+        "text": "Kill 3 unique Echo Bosses",
+        "type": "pact",
+        "points": 80,
+        "isReset": true,
+        "region": "Global"
+      }
+    ]
+  },
+  "meta": {
+    "0": {
+      "customBuilds": [
+        {
+          "name": "Starting 16p Slayer Build",
+          "url": "https://www.osrsleaguescountdown.io/tree?share=1BQBAAgAAAMAAAQAACGQAMAs&name=..%20v%20start%20cbow%2016p"
+        }
+      ]
+    },
+    "1": {
+      "customBuilds": [
+        {
+          "name": "Dps setup",
+          "url": "https://dps.osrs.wiki?id=AivasRobesMystery"
+        }
+      ]
+    },
+    "2": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference",
+          "url": "https://dps.osrs.wiki?id=HarpoonAnguishWaders"
+        }
+      ]
+    },
+    "3": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference",
+          "url": "https://dps.osrs.wiki?id=CluelessSvensMaggots"
+        }
+      ]
+    },
+    "4": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference",
+          "url": "https://dps.osrs.wiki?id=PharaohsJusticiarsOpulent"
+        }
+      ]
+    },
+    "5": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference - Echo boss",
+          "url": "https://dps.osrs.wiki?id=WarspearHuntingFabric"
+        },
+        {
+          "name": "Setup Reference - Jad",
+          "url": "https://dps.osrs.wiki?id=ElizabethsVambracesSteak"
+        }
+      ]
+    },
+    "6": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference - Black dragon",
+          "url": "https://dps.osrs.wiki?id=StuddedGarbScrying"
+        },
+        {
+          "name": "Setup Reference - CG",
+          "url": "https://dps.osrs.wiki?id=RebirthArrowsTranscription"
+        }
+      ]
+    },
+    "7": {
+      "customBuilds": [
+        {
+          "name": "Setup Reference",
+          "url": "https://dps.osrs.wiki?id=TerrorbirdTassetLyrei"
+        },
+        {
+          "name": "19p Mage build",
+          "url": "https://www.osrsleaguescountdown.io/tree?share=1wxgADiEDAMAQBAIAAIAAAAA&name=.!%20Air%20Prayer%2025p"
+        },
+        {
+          "name": "19p Mage Reference Setup",
+          "url": "https://dps.osrs.wiki?id=LocatorWoodenSnowman"
+        }
+      ]
+    },
+    "8": {
+      "customBuilds": [
+        {
+          "name": "19p Echo Thermy Dps Setup",
+          "url": "https://dps.osrs.wiki?id=BlockerCleaningCalamity"
+        }
+      ]
+    }
+  }
+}

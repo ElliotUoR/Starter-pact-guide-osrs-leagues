@@ -5,11 +5,13 @@ import { Step, StepLink } from '@/data/guideData';
 import { relicImg, pactImg } from '@/utils/assetPath';
 import HunterRumoursModal from './HunterRumoursModal';
 import Hunter46Modal from './Hunter46Modal';
+import Fletching45Modal from './Fletching45Modal';
 import type { ReactNode } from 'react';
 
 const MODAL_COMPONENTS: Record<string, React.ComponentType<{ onClose: () => void }>> = {
   'hunter-rumours': HunterRumoursModal,
   'hunter-46': Hunter46Modal,
+  'fletching-45': Fletching45Modal,
 };
 
 interface Segment {

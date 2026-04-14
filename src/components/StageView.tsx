@@ -31,6 +31,7 @@ interface Props {
   readonly onEditStageMeta: (stageId: number, meta: StageMeta) => void;
   readonly onAddBuild: (stageId: number, build: { name: string; url: string }) => void;
   readonly onUpdateBuild: (stageId: number, oldUrl: string, build: { name: string; url: string }) => void;
+  readonly onBakeEdits?: () => Promise<void>;
 }
 
 export default function StageView({
@@ -53,6 +54,7 @@ export default function StageView({
   onEditStageMeta,
   onAddBuild,
   onUpdateBuild,
+  onBakeEdits,
 }: Props) {
   const [showAddBuild, setShowAddBuild] = useState(false);
   const [editingBuild, setEditingBuild] = useState<{ name: string; url: string } | null>(null);
@@ -104,6 +106,21 @@ export default function StageView({
           </div>
           <span className="text-[10px] text-red-700 uppercase tracking-wide leading-none">Pacts</span>
         </div>
+
+        {/* Bake to Source (dev only) */}
+        {onBakeEdits && (
+          <button
+            type="button"
+            onClick={() => {
+              if (confirm('Bake localStorage edits into source? This will overwrite persistedOverrides.json and clear local edits.')) {
+                void onBakeEdits();
+              }
+            }}
+            className="text-[11px] text-green-400 border border-green-800/60 bg-green-950/30 hover:bg-green-900/40 rounded px-2.5 py-1 transition-colors"
+          >
+            ⬆ Bake to Source
+          </button>
+        )}
 
         {/* Edit mode toggle */}
         <button

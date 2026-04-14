@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+// Static export is only enabled for GitHub Pages builds (NEXT_PUBLIC_BASE_PATH is set).
+// Local dev omits it so that API routes (e.g. /api/bake-edits) work.
+const isPagesBuild = Boolean(process.env.NEXT_PUBLIC_BASE_PATH);
+
 const nextConfig = {
-  output: 'export',
+  ...(isPagesBuild ? { output: 'export' } : {}),
   trailingSlash: true,
   images: { unoptimized: true },
-  // Replace 'osrs-leagues-guide' with your actual GitHub repo name
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
 };
 
